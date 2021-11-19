@@ -1,0 +1,73 @@
+@import url(root.css);
+
+/*
+__________________________________________________
+GENÉRICOS
+__________________________________________________
+*/
+
+.grid-padre{
+    display: grid;
+    grid-template-columns: 8.5% 8.3% 8.3% 8.3% 8.3% 8.3% 8.3% 8.3% 8.3% 8.3% 8.3% 8.5%;
+    grid-template-rows: 8.3% 8.3% 8.3% 8.3% 8.3% 8.3% 8.3% 8.3% 8.3% 8.3% 8.3% 8.3%;
+
+}
+
+    .grid-header{
+        grid-column-start: 1;
+        grid-column-end: 13;
+        grid-row: 1;
+
+    }
+        .titulo-header{
+            grid-column-start: 1;
+            grid-column-end: 4;
+        }
+        .logo-header{
+            grid-column-start: 4;
+            grid-column-end: 6;
+        }
+
+    .grid-nav{
+        grid-row-start: 2;
+        grid-row-end: 3;
+        grid-column-start: 2;
+        grid-column-end: 12;
+
+
+    }
+
+    .grid-menu--top{
+
+
+    }
+    .grid-footer{
+        grid-column-start: 1;
+        grid-column-end: 13;
+        grid-row-start: 11;
+        grid-row-end: 13;
+    }
+
+/*
+__________________________________________________
+ESPECIFICOS
+__________________________________________________
+*/
+
+    /* INDEX */
+
+    .grid-section--index{
+        grid-row-start: 4;
+        grid-row-end: 11;
+        grid-column-start: 2;
+        grid-column-end: 8;
+
+    }
+
+    .grid-aside--index{
+        grid-row-start: 4;
+        grid-row-end: 11;
+        grid-column-start: 8;
+        grid-column-end: 12;
+
+    }

@@ -1,0 +1,52 @@
+@import url(root.css);
+/* Ajustes Generales */
+body{
+
+    background-color: var(--gris-oscuro);
+    font-family: var(--texto);
+}
+
+
+h1 {
+    font-family: var(--titulos),Serif;
+    color: var(--gris-oscuro);
+    font-weight: normal;
+}
+
+p {}
+/* Header */
+
+header {
+    background-color: var(--gris-claro);
+    width: 100%;
+}
+
+header h1{
+    font-size: 3vw;
+}
+
+header h1 em{
+    font-style: unset;
+    font-weight: bold;
+}
+
+
+/* Navs */
+    /*Listas - menu*/
+
+ul {
+    list-style-type: none;
+}
+
+li>a{
+    text-decoration: none;
+    float: left;
+}
+
+li>a.here{              /*Enlace en el que estamos*/
+    color: var(--verde-claro);
+}
+
+li>a:visited{
+    color: var(--gris-claro);
+}

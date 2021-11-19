@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;800;900&family=Lato:ital,wght@0,400;0,700;1,400&display=swap');
+
+:root{
+    /*Colores Principales*/
+    --gris-oscuro: rgba(73, 81, 96, 1);             /* Hex: 495160*/
+    --gris-claro: rgba(186, 198, 186, 1);           /* Hex: BAC6BA*/
+    --verde-claro: rgba(164, 249, 187, 1);          /* Hex: A4F9BB*/
+    --azul-oscuro: rgba(69, 80, 186, 1);            /* Hex: 4550BA*/
+    /*Font Families*/
+    --titulos: Cinzel;
+    --texto: lato;
+
+}
+
