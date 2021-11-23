@@ -4,6 +4,7 @@ body{
 
     background-color: var(--gris-oscuro);
     font-family: var(--texto);
+    color: var(--gris-claro);
 }
 
 
@@ -21,13 +22,26 @@ header {
     width: 100%;
 }
 
-header h1{
-    font-size: 3vw;
+    header h1{
+        font-size: 2vw;
+    }
+
+    header h1 em,footer h1 em{
+        font-style: unset;
+        font-weight: bold;
+    }
+
+footer {
+    background: var(--gris-claro);
+    color: var(--gris-oscuro);
 }
 
-header h1 em{
-    font-style: unset;
-    font-weight: bold;
+
+img {
+
+    object-fit: cover;
+    width: 100%;
+    max-height: 100%;
 }
 
 
@@ -38,15 +52,31 @@ ul {
     list-style-type: none;
 }
 
-li>a{
-    text-decoration: none;
-    float: left;
-}
 
-li>a.here{              /*Enlace en el que estamos*/
-    color: var(--verde-claro);
-}
+    li>a,a{
+        text-decoration: none;
+        float: left;
+        margin: 0 15% 10px 0;
+    }
 
-li>a:visited{
+    #here{              /*Enlace en el que estamos*/
+        color: var(--verde-claro);
+    }
+
+
+
+    a:visited,footer>ul>li>a:visited{
+        color: var(--gris-oscuro);
+    }
+
+/*Especificidades*/
+
+.dona{
+    background-color: var(--azul-oscuro);
+    border-radius: 55px;
+}
+    /* Colores de textos en contraste, todos iran aquí*/
+
+.section-title--index, .aside-title, a:visited{
     color: var(--gris-claro);
 }
