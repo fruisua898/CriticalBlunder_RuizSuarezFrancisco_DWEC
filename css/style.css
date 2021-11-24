@@ -1,10 +1,26 @@
 @import url(root.css);
+
+/*(1366x768) Pantalla clase
+@media screen and (max-width: 1366px) {
+
+}*/
+.redes-sociales{
+    width: 120%;
+}
+
 /* Ajustes Generales */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body{
 
     background-color: var(--gris-oscuro);
     font-family: var(--texto);
     color: var(--gris-claro);
+
 }
 
 
@@ -12,24 +28,37 @@ h1 {
     font-family: var(--titulos),Serif;
     color: var(--gris-oscuro);
     font-weight: normal;
+    margin-bottom: 8%;
 }
 
-p {}
+h2 {
+    font-family: var(--titulos), Serif;
+    font-weight: lighter;
+    margin-bottom: 8%;
+    font-size: 1.2rem;
+
+}
+
+
+
+p {
+    margin-bottom: 8%;
+}
 /* Header */
 
 header {
     background-color: var(--gris-claro);
-    width: 100%;
 }
 
-    header h1{
-        font-size: 2vw;
-    }
+header h1{
+    font-size: 2vw;
+    margin-bottom: 0;
+}
 
-    header h1 em,footer h1 em{
-        font-style: unset;
-        font-weight: bold;
-    }
+header h1 em,footer h1 em{
+    font-style: unset;
+    font-weight: bold;
+}
 
 footer {
     background: var(--gris-claro);
@@ -37,8 +66,8 @@ footer {
 }
 
 
-img {
 
+img {
     object-fit: cover;
     width: 100%;
     max-height: 100%;
@@ -46,28 +75,30 @@ img {
 
 
 /* Navs */
-    /*Listas - menu*/
+/*Listas - menu*/
 
 ul {
     list-style-type: none;
+    margin-top: 2.5%;
+    margin-bottom: 2.5%;
 }
 
 
-    li>a,a{
-        text-decoration: none;
-        float: left;
-        margin: 0 15% 10px 0;
-    }
+li>a,a{
+    text-decoration: none;
+    float: left;
+    margin: 0 15% 10px 0;
+}
 
-    #here{              /*Enlace en el que estamos*/
-        color: var(--verde-claro);
-    }
+#here{              /*Enlace en el que estamos*/
+    color: var(--verde-claro);
+}
 
 
 
-    a:visited,footer>ul>li>a:visited{
-        color: var(--gris-oscuro);
-    }
+a:visited,footer>ul>li>a:visited{
+    color: var(--gris-oscuro);
+}
 
 /*Especificidades*/
 
@@ -75,7 +106,7 @@ ul {
     background-color: var(--azul-oscuro);
     border-radius: 55px;
 }
-    /* Colores de textos en contraste, todos iran aquí*/
+/* Colores de textos en contraste, todos iran aquí*/
 
 .section-title--index, .aside-title, a:visited{
     color: var(--gris-claro);

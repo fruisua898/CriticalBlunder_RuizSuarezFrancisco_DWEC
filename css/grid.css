@@ -16,88 +16,93 @@ __________________________________________________
     grid-template-areas:
       "hdgen    hdgen   hdgen   hdgen   hdgen   hdgen   hdgen   hdgen   hdgen   hdgen   hdgen   hdgen"
       ".        navgen  navgen  navgen  navgen  navgen  navgen  navgen  navgen  navgen  navgen  ."
-      ".        secindx secindx secindx secindx secindx secindx .       .       asndx   asndx   ."
-      ".        secindx secindx secindx secindx secindx secindx .       .       asndx   asndx   ."
-      ".        secindx secindx secindx secindx secindx secindx .       .       asndx   asndx   ."
-      ".        secindx secindx secindx secindx secindx secindx .       .       asndx   asndx   ."
-      ".        secindx secindx secindx secindx secindx secindx .       .       asndx   asndx   ."
-      ".        secindx secindx secindx secindx secindx secindx .       .       asndx   asndx   ."
-      ".        secindx secindx secindx secindx secindx secindx .       .       asndx   asndx   ."
-      ".        secindx secindx secindx secindx secindx secindx .       .       asndx   asndx   ."
+      ".        secindx secindx secindx secindx secindx secindx .       asndx   asndx   asndx   ."
+      ".        secindx secindx secindx secindx secindx secindx .       asndx   asndx   asndx   ."
+      ".        secindx secindx secindx secindx secindx secindx .       asndx   asndx   asndx   ."
+      ".        secindx secindx secindx secindx secindx secindx .       asndx   asndx   asndx   ."
+      ".        secindx secindx secindx secindx secindx secindx .       asndx   asndx   asndx   ."
+      ".        secindx secindx secindx secindx secindx secindx .       asndx   asndx   asndx   ."
+      ".        secindx secindx secindx secindx secindx secindx .       asndx   asndx   asndx   ."
+      ".        secindx secindx secindx secindx secindx secindx .       asndx   asndx   asndx   ."
       '.        .       .       .       .       .       .       .       .       .       .       .'
       "ftgen    ftgen   ftgen   ftgen   ftgen   ftgen   ftgen   ftgen   ftgen   ftgen   ftgen   ftgen";
 
 }
 
-    /* HEADER */
+/* HEADER */
 
-    .grid-header{
-        grid-area: hdgen;
-        display: inline-grid;
-        grid-auto-flow: row;
-        align-content: center;
-        justify-content: center;
-        align-items: center;
-        grid-template-areas: ". .   .   .   .   logo-header    titulo-header  .   .   .   .   .";
-        grid-gap: .5%;
-    }
+.grid-header{
+    grid-area: hdgen;
+    display: inline-grid;
+    grid-auto-flow: row;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    grid-template-areas: ". .   .   .   .   logo-header    titulo-header  .   .   .   .   .";
+    grid-gap: .5%;
+}
 
-        .logo-header{
-            grid-area: logo-header;
-        }
+.logo-header{
+    grid-area: logo-header;
+}
 
-        .titulo-header{
-            grid-area: titulo-header;
-        }
+.titulo-header{
+    grid-area: titulo-header;
+}
 
-    /* NAV */
+/* NAV */
 
-    .grid-nav{
-        grid-area: navgen;
-        display: grid;
-        grid-template-areas:
-                ".  indxnav . vadnav . tabnav . supnav .  lognav";
-        padding-top: 2.5%
-    }
+.grid-nav{
+    grid-area: navgen;
+    display: grid;
+    grid-template-areas:
+                "menutop  menutop menutop menutop menutop menutop menutop menutop menutop   menutop";
+}
 
-        .inicio-nav{
-            grid-area: indxnav;
-        }
-        .vademecum-nav{
-            grid-area: vadnav;
-        }
-        .tabletop-nav{
-            grid-area: tabnav;
-        }
-        .support-nav{
-            grid-area: supnav;
-        }
-        .login-nav{
-            grid-area: lognav;
-        }
+.grid-menu--top{
+    grid-area: menutop;
+    grid-template-areas:
+                " indxnav . vadnav . tabnav . supnav .  lognav";
 
-    /* FOOTER */
+    display: inline-grid;
 
-    .grid-footer{
-        grid-area: ftgen;
-        grid-template-areas: ". .  logo-footer   doc-legales doc-legales doc-legales doc-legales redes-sociales  redes-sociales  redes-sociales  redes-sociales .   .";
-        display: inline-grid;
-        grid-auto-flow: row;
-        align-content: center;
-        align-items: center;
+}
+.inicio-nav{
+    grid-area: indxnav;
+}
+.vademecum-nav{
+    grid-area: vadnav;
+}
+.tabletop-nav{
+    grid-area: tabnav;
+}
+.support-nav{
+    grid-area: supnav;
+}
+.login-nav{
+    grid-area: lognav;
+}
 
+/* FOOTER */
 
-    }
-        .logo-titulo-footer {
-            grid-area: logo-footer;
-        }
-        .doc-legales{
-            grid-area: doc-legales;
-        }
+.grid-footer{
+    grid-area: ftgen;
+    display: inline-grid;
+    grid-auto-flow: row;
+    align-content: center;
+    align-items: center;
+    grid-template-areas: ". logo-footer doc-legales  doc-legales  doc-legales  doc-legales doc-legales doc-legales  redes-sociales  redes-sociales  redes-sociales redes-sociales    .";
+}
+.logo-titulo-footer {
+    grid-area: logo-footer;
+}
+.doc-legales{
+    grid-area: doc-legales;
+}
 
-        .redes-sociales{
-            grid-area: redes-sociales;
-        }
+.redes-sociales{
+    grid-area: redes-sociales;
+}
 
 /*
 ____________________________________________________________________________________________________
@@ -111,12 +116,12 @@ __________________________________________________
  _________________________________________________
  */
 
-        /* SECTION */
+/* SECTION */
 
-    .grid-section--index{
-        grid-area: secindx;
-        grid-template-areas:
-                ".          .          sectitindx sectitindx .          ."
+.grid-section--index{
+    grid-area: secindx;
+    grid-template-areas:
+                ".          sectitindx sectitindx sectitindx sectitindx ."
                 "sectxtindx sectxtindx sectxtindx sectxtindx sectxtindx sectxtindx"
                 "sectxtindx sectxtindx sectxtindx sectxtindx sectxtindx sectxtindx"
                 "secimgindx secimgindx secimgindx secimgindx secimgindx secimgindx"
@@ -124,105 +129,127 @@ __________________________________________________
                 "secimgindx secimgindx secimgindx secimgindx secimgindx secimgindx"
                 "secimgindx secimgindx secimgindx secimgindx secimgindx secimgindx"
                 "secimgindx secimgindx secimgindx secimgindx secimgindx secimgindx";
-        display: inline-grid;
-        grid-auto-flow: row;
-        align-content: center;
-    }
-
-        .section-title--index{
-            grid-area: sectitindx;
-        }
-
-        .section-text--index{
-            grid-area: sectxtindx;
-        }
-
-        .section-image--index{
-            grid-area: secimgindx;
-        }
-
-        /* ASIDE */
-
-    .grid-aside--index{
-        grid-area: asndx;
-        grid-template-areas:
-                "astitndx      ."
-                "asitem1indx   aspic1indx"
-                "asitem2indx   aspic2indx"
-                "asitem3indx   aspic3indx"
-                "asitem4indx   aspic4indx"
-                "donatit   donatit"
-                "donatxt   donatxt"
-                ".  donabutt";
-        display: grid;
-        grid-auto-flow: column;
-        align-content: center;
-        align-items: center;
-    }
-        .aside-title{
-            grid-area: astitndx;
-        }
-
-        .aside-item-1--index{
-            grid-area: asitem1indx;
-        }
-            .aside-pic-1--index{
-                grid-area: aspic1indx;
-            }
-
-        .aside-item-2--index{
-            grid-area: asitem2indx;
-        }
-            .aside-pic-2--index{
-                grid-area: aspic2indx;
-            }
-
-        .aside-item-3--index{
-            grid-area: asitem3indx;
-        }
-            .aside-pic-3--index{
-                grid-area: aspic3indx;
-            }
-
-        .aside-item-4--index{
-            grid-area: asitem4indx;
-        }
-            .aside-pic-4--index{
-                grid-area: aspic4indx;
-            }
-
-
-        .aside-dona-title--index{
-            grid-area: donatit;
-        }
-        .aside-dona-text--index{
-            grid-area: donatxt;
-        }
-        .dona{
-            grid-area: donabutt;
-        }
-    /*
-    .grid-padre {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: repeat(12, 1fr);
-    grid-column-gap: 2.5%;
-    grid-row-gap: 0px;
+    display: inline-grid;
+    align-content: center;
+    align-items: center;
 }
 
-    .grid-header {
-        grid-area: 1 / 1 / 2 / 13;
-    }
-    .grid-nav {
-        grid-area: 2 / 1 / 3 / 13;
-    }
-    .grid-section--index {
-        grid-area: 3 / 2 / 11 / 8;
-    }
-    .grid-aside--index {
-        grid-area: 3 / 9 / 11 / 12;
-    }
-    .grid-footer {
-        grid-area: 12 / 1 / 13 / 13;
-    }
-     */
+.section-title--index{
+    grid-area: sectitindx;
+}
+
+.section-text--index{
+    grid-area: sectxtindx;
+}
+
+.section-image--index{
+    grid-area: secimgindx;
+}
+
+/* ASIDE */
+
+.grid-aside--index{
+    grid-area: asndx;
+    grid-template-areas:
+                "astitndx  astitndx   astitndx"
+                "asmenu    asmenu     asmenu"
+                "asmenu    asmenu     asmenu"
+                "asmenu    asmenu     asmenu"
+                "asmenu    asmenu     asmenu"
+                "donatit   donatit    donatit"
+                "donatxt   donatxt    donatxt"
+                ".         .          donabutt";
+    display: inline-grid;
+    align-content: center;
+    align-items: center;
+
+}
+.aside-title{
+    grid-area: astitndx;
+
+}
+.aside-menu{
+    grid-area: asmenu;
+    grid-template-areas:
+                "asitem1indx    asitem1indx     aspic1indx"
+                "asitem2indx    asitem2indx     aspic2indx"
+                "asitem3indx    asitem3indx     aspic3indx"
+                "asitem4indx    asitem4indx     aspic4indx";
+
+    align-content: center;
+    align-items: center;
+
+
+
+}
+.aside-item-1--index{
+    grid-area: asitem1indx;
+    justify-self:center;
+
+}
+.aside-pic-1--index{
+    grid-area: aspic1indx;
+    align-self:center;
+}
+
+.aside-item-2--index{
+    grid-area: asitem2indx;
+    align-self:center;
+}
+.aside-pic-2--index{
+    grid-area: aspic2indx;
+    align-self:center;
+}
+
+.aside-item-3--index{
+    grid-area: asitem3indx;
+    align-self:center;
+}
+.aside-pic-3--index{
+    grid-area: aspic3indx;
+    align-self:center;
+}
+
+.aside-item-4--index{
+    grid-area: asitem4indx;
+    align-self:center;
+}
+.aside-pic-4--index{
+    grid-area: aspic4indx;
+    align-self:center;
+}
+
+
+.aside-dona-title--index{
+    grid-area: donatit;
+}
+.aside-dona-text--index{
+    grid-area: donatxt;
+}
+.dona{
+    grid-area: donabutt;
+}
+/*
+.grid-padre {
+display: grid;
+grid-template-columns: repeat(12, 1fr);
+grid-template-rows: repeat(12, 1fr);
+grid-column-gap: 2.5%;
+grid-row-gap: 0px;
+}
+.grid-header {
+    grid-area: 1 / 1 / 2 / 13;
+}
+.grid-nav {
+    grid-area: 2 / 1 / 3 / 13;
+}
+.grid-section--index {
+    grid-area: 3 / 2 / 11 / 8;
+}
+.grid-aside--index {
+    grid-area: 3 / 9 / 11 / 12;
+}
+.grid-footer {
+    grid-area: 12 / 1 / 13 / 13;
+}
+ */
