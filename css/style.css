@@ -1,13 +1,5 @@
 @import url(root.css);
 
-/*(1366x768) Pantalla clase
-@media screen and (max-width: 1366px) {
-
-}*/
-.redes-sociales{
-    width: 120%;
-}
-
 /* Ajustes Generales */
 *{
     margin: 0;
@@ -38,12 +30,17 @@ h2 {
     font-size: 1.2rem;
 
 }
-
-
-
-p {
-    margin-bottom: 8%;
+.grid-aside--index{
+    border-bottom-width: 10px;
+    border-left-style: solid;
+    border-left-color: var(--gris-claro);
 }
+.aside-title, .aside-menu, .aside-dona-title--index, .aside-dona-text--index, .dona{
+    margin-left: 10%;
+}
+
+
+ {}
 /* Header */
 
 header {
@@ -79,16 +76,19 @@ img {
 
 ul {
     list-style-type: none;
+}
+.grid-nav{
+    font-size: 1.5rem;
     margin-top: 2.5%;
     margin-bottom: 2.5%;
 }
-
-
 li>a,a{
     text-decoration: none;
+    color: var(--gris-claro);
     float: left;
     margin: 0 15% 10px 0;
 }
+
 
 #here{              /*Enlace en el que estamos*/
     color: var(--verde-claro);
@@ -103,6 +103,8 @@ a:visited,footer>ul>li>a:visited{
 /*Especificidades*/
 
 .dona{
+    margin-bottom: 5%;
+    margin-top: 5%;
     background-color: var(--azul-oscuro);
     border-radius: 55px;
 }
@@ -110,4 +112,8 @@ a:visited,footer>ul>li>a:visited{
 
 .section-title--index, .aside-title, a:visited{
     color: var(--gris-claro);
+}
+
+.grid-footer {
+    font-size: 0.7rem;
 }

@@ -38,17 +38,17 @@ __________________________________________________
     align-content: center;
     justify-content: center;
     align-items: center;
-    grid-template-areas: ". .   .   .   .   logo-header    titulo-header  .   .   .   .   .";
+    grid-template-areas: "logo-header    titulo-header";
     grid-gap: .5%;
 }
 
-.logo-header{
-    grid-area: logo-header;
-}
+    .logo-header{
+        grid-area: logo-header;
+    }
 
-.titulo-header{
-    grid-area: titulo-header;
-}
+    .titulo-header{
+        grid-area: titulo-header;
+    }
 
 /* NAV */
 
@@ -59,50 +59,51 @@ __________________________________________________
                 "menutop  menutop menutop menutop menutop menutop menutop menutop menutop   menutop";
 }
 
-.grid-menu--top{
-    grid-area: menutop;
-    grid-template-areas:
-                " indxnav . vadnav . tabnav . supnav .  lognav";
+    .grid-menu--top{
+        grid-area: menutop;
+        grid-template-areas:
+                    " indxnav . vadnav . tabnav . supnav .  lognav";
 
-    display: inline-grid;
+        display: inline-grid;
 
-}
-.inicio-nav{
-    grid-area: indxnav;
-}
-.vademecum-nav{
-    grid-area: vadnav;
-}
-.tabletop-nav{
-    grid-area: tabnav;
-}
-.support-nav{
-    grid-area: supnav;
-}
-.login-nav{
-    grid-area: lognav;
-}
+    }
+
+        .inicio-nav{
+            grid-area: indxnav;
+        }
+        .vademecum-nav{
+            grid-area: vadnav;
+        }
+        .tabletop-nav{
+            grid-area: tabnav;
+        }
+        .support-nav{
+            grid-area: supnav;
+        }
+        .login-nav{
+            grid-area: lognav;
+        }
 
 /* FOOTER */
 
 .grid-footer{
     grid-area: ftgen;
-    display: inline-grid;
-    grid-auto-flow: row;
-    align-content: center;
+    display: grid;
     align-items: center;
-    grid-template-areas: ". logo-footer doc-legales  doc-legales  doc-legales  doc-legales doc-legales doc-legales  redes-sociales  redes-sociales  redes-sociales redes-sociales    .";
-}
-.logo-titulo-footer {
-    grid-area: logo-footer;
-}
-.doc-legales{
-    grid-area: doc-legales;
+    grid-template-areas: ". logo-footer doc-legales  doc-legales  doc-legales  doc-legales doc-legales redes-sociales  redes-sociales  redes-sociales  redes-sociales redes-sociales    .";
 }
 
-.redes-sociales{
-    grid-area: redes-sociales;
-}
+    .logo-titulo-footer {
+        grid-area: logo-footer;
+        margin-top: 7%;
+    }
+    .doc-legales{
+        grid-area: doc-legales;
+    }
+
+    .redes-sociales{
+        grid-area: redes-sociales;
+    }
 
 /*
 ____________________________________________________________________________________________________
@@ -129,9 +130,8 @@ __________________________________________________
                 "secimgindx secimgindx secimgindx secimgindx secimgindx secimgindx"
                 "secimgindx secimgindx secimgindx secimgindx secimgindx secimgindx"
                 "secimgindx secimgindx secimgindx secimgindx secimgindx secimgindx";
-    display: inline-grid;
-    align-content: center;
-    align-items: center;
+    display: grid;
+
 }
 
 .section-title--index{
@@ -158,12 +158,10 @@ __________________________________________________
                 "asmenu    asmenu     asmenu"
                 "donatit   donatit    donatit"
                 "donatxt   donatxt    donatxt"
-                ".         .          donabutt";
+                "donabutt       donabutt         donabutt";
     display: inline-grid;
-    align-content: center;
-    align-items: center;
-
 }
+
 .aside-title{
     grid-area: astitndx;
 
@@ -172,51 +170,42 @@ __________________________________________________
     grid-area: asmenu;
     grid-template-areas:
                 "asitem1indx    asitem1indx     aspic1indx"
-                "asitem2indx    asitem2indx     aspic2indx"
+                "asitem2indx    asitem2indx    aspic2indx"
                 "asitem3indx    asitem3indx     aspic3indx"
-                "asitem4indx    asitem4indx     aspic4indx";
-
-    align-content: center;
-    align-items: center;
-
-
-
+                "asitem4indx    asitem4indx    aspic4indx";
+    display:grid;
 }
+
 .aside-item-1--index{
     grid-area: asitem1indx;
-    justify-self:center;
-
+    align-self: center;
 }
 .aside-pic-1--index{
     grid-area: aspic1indx;
-    align-self:center;
 }
 
 .aside-item-2--index{
     grid-area: asitem2indx;
-    align-self:center;
+    align-self: center;
 }
 .aside-pic-2--index{
     grid-area: aspic2indx;
-    align-self:center;
 }
 
 .aside-item-3--index{
     grid-area: asitem3indx;
-    align-self:center;
+    align-self: center;
 }
 .aside-pic-3--index{
     grid-area: aspic3indx;
-    align-self:center;
 }
 
 .aside-item-4--index{
     grid-area: asitem4indx;
-    align-self:center;
+    align-self: center;
 }
 .aside-pic-4--index{
     grid-area: aspic4indx;
-    align-self:center;
 }
 
 
@@ -229,6 +218,82 @@ __________________________________________________
 .dona{
     grid-area: donabutt;
 }
+/*--------------------------------------------------------------------------*/
+/* MOBILE */
+/* -------  INDEX */
+/*--------------------------------------------------------------------------*/
+
+/*(1366x768) Pantalla clase*/
+
+@media only screen and (max-width: 1024px) {
+    * {
+        font-size: 1rem;
+    }
+    .grid-aside--index {
+        display: none;
+    }
+
+    .grid-padre {
+
+        display: grid;
+        grid-template-columns: repeat(12, 7.88%);
+        grid-template-rows: repeat(12, auto);
+        grid-column-gap: .5%;
+        grid-row-gap: .5%;
+        grid-template-areas:
+      "hdgen    hdgen   hdgen   hdgen   hdgen   hdgen   hdgen   hdgen   hdgen   hdgen   hdgen   hdgen"
+      ".        navgen  navgen  navgen  navgen  navgen  navgen  navgen  navgen  navgen  navgen  ."
+      ".        .       .       secindx secindx secindx secindx secindx secindx .       .       ."
+      ".        .       .       secindx secindx secindx secindx secindx secindx .       .       ."
+      ".        .       .       secindx secindx secindx secindx secindx secindx .       .       ."
+      ".        .       .       secindx secindx secindx secindx secindx secindx .       .       ."
+      ".        .       .       secindx secindx secindx secindx secindx secindx .       .       ."
+      ".        .       .       secindx secindx secindx secindx secindx secindx .       .       ."
+      ".        .       .       secindx secindx secindx secindx secindx secindx .       .       ."
+      ".        .       .       secindx secindx secindx secindx secindx secindx .       .       ."
+      "ftgen    ftgen   ftgen   ftgen   ftgen   ftgen   ftgen   ftgen   ftgen   ftgen   ftgen   ftgen"
+      "ftgen    ftgen   ftgen   ftgen   ftgen   ftgen   ftgen   ftgen   ftgen   ftgen   ftgen   ftgen";
+
+    }
+
+
+
+    .grid-footer {
+        grid-area: ftgen;
+        display: grid;
+        align-items: center;
+        grid-template-areas:
+                "doc-legales"
+                "logo-footer  redes-sociales"    }
+
+    .logo-titulo-footer {
+        grid-area: logo-footer;
+        margin-top: 7%;
+
+    }
+
+    .doc-legales {
+        grid-area: doc-legales;
+    }
+
+
+    .redes-sociales {
+        grid-area: redes-sociales;
+    }
+}
+/*
+
+
+
+
+}
+
+
+/*--------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------*/
+
+
+
 /*
 .grid-padre {
 display: grid;
