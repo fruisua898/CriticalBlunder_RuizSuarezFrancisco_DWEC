@@ -2,31 +2,51 @@
 
 /*
 __________________________________________________
-GENÉRICOS
+GENÉRICOS DESKTOP
 __________________________________________________
 */
 
 .grid-padre{
-
     display: grid;
     grid-template-columns: repeat(12, 7.88%);
     grid-template-rows: repeat(12,auto);
     grid-column-gap: .5%;
     grid-row-gap: .5%;
     grid-template-areas:
-      "hdgen    hdgen   hdgen   hdgen   hdgen   hdgen   hdgen   hdgen   hdgen   hdgen   hdgen   hdgen"
-      ".        navgen  navgen  navgen  navgen  navgen  navgen  navgen  navgen  navgen  navgen  ."
-      ".        secindx secindx secindx secindx secindx secindx .       asndx   asndx   asndx   ."
-      ".        secindx secindx secindx secindx secindx secindx .       asndx   asndx   asndx   ."
-      ".        secindx secindx secindx secindx secindx secindx .       asndx   asndx   asndx   ."
-      ".        secindx secindx secindx secindx secindx secindx .       asndx   asndx   asndx   ."
-      ".        secindx secindx secindx secindx secindx secindx .       asndx   asndx   asndx   ."
-      ".        secindx secindx secindx secindx secindx secindx .       asndx   asndx   asndx   ."
-      ".        secindx secindx secindx secindx secindx secindx .       asndx   asndx   asndx   ."
-      ".        secindx secindx secindx secindx secindx secindx .       asndx   asndx   asndx   ."
-      '.        .       .       .       .       .       .       .       .       .       .       .'
-      "ftgen    ftgen   ftgen   ftgen   ftgen   ftgen   ftgen   ftgen   ftgen   ftgen   ftgen   ftgen";
+      "hdgen    hdgen       hdgen   hdgen   hdgen   hdgen   hdgen   hdgen   hdgen   hdgen   hdgen  hdgen"
+      ".        navgen      navgen  navgen  navgen  navgen  navgen  navgen  navgen  navgen  navgen ."
+      ".        main        main    main    main    main    main    main    main    main    main   ."
+      ".        main        main    main    main    main    main    main    main    main    main   ."
+      ".        main        main   main    main    main    main    main    main    main    main    ."
+      ".        main        main   main    main    main    main    main    main    main    main    ."
+      ".        main        main   main    main    main    main    main    main    main    main    ."
+      ".        main        main   main    main    main    main    main    main    main    main    ."
+      ".        main        main   main    main    main    main    main    main    main    main    ."
+      ".        main        main   main    main    main    main    main    main    main    main    ."
+      '.        .           .      .       .       .       .       .       .       .       .       .'
+      "ftgen    ftgen       ftgen  ftgen   ftgen   ftgen   ftgen   ftgen   ftgen   ftgen   ftgen   ftgen";
 
+}
+
+.grid-main--index{
+    grid-area: main;
+    display: inline-grid;
+    grid-auto-flow: row;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    grid-template-areas:
+
+    ".        secindx secindx secindx secindx secindx secindx .       asndx   asndx   asndx   ."
+    ".        secindx secindx secindx secindx secindx secindx .       asndx   asndx   asndx   ."
+    ".        secindx secindx secindx secindx secindx secindx .       asndx   asndx   asndx   ."
+    ".        secindx secindx secindx secindx secindx secindx .       asndx   asndx   asndx   ."
+    ".        secindx secindx secindx secindx secindx secindx .       asndx   asndx   asndx   ."
+    ".        secindx secindx secindx secindx secindx secindx .       asndx   asndx   asndx   ."
+    ".        secindx secindx secindx secindx secindx secindx .       asndx   asndx   asndx   ."
+    ".        secindx secindx secindx secindx secindx secindx .       asndx   asndx   asndx   .";
+
+    grid-gap: .5%;
 }
 
 /* HEADER */
@@ -90,26 +110,47 @@ __________________________________________________
     grid-area: ftgen;
     display: grid;
     align-items: center;
-    grid-template-areas: ". logo-footer doc-legales  doc-legales  doc-legales  doc-legales doc-legales redes-sociales  redes-sociales  redes-sociales  redes-sociales redes-sociales    .";
+    grid-template-areas: ". logo-footer doc-legales  doc-legales  doc-legales  . redes-sociales redes-sociales  redes-sociales  redes-sociales  .   ";
 }
 
     .logo-titulo-footer {
         grid-area: logo-footer;
         margin-top: 7%;
+        grid-template: "logo-footer";
     }
+
     .doc-legales{
         grid-area: doc-legales;
+        grid-template: "aviso-legal cookies politicas";
+        display: inline-grid;
     }
+        .aviso_legal{
+            grid-area: aviso-legal;
+        }
+        .cookies{
+            grid-area: cookies;
+        }
+        .politicas{
+            grid-area: politicas;
+        }
 
     .redes-sociales{
         grid-area: redes-sociales;
+        grid-template-areas: "instagram facebook  twitter  telegram";
+        display: inline-grid;
     }
-
-/*
-____________________________________________________________________________________________________
-    ESPECIFICOS
-____________________________________________________________________________________________________
-*/
+        .instagram{
+            grid-area: instagram;
+        }
+        .facebook{
+            grid-area: facebook;
+        }
+        .twitter{
+            grid-area: twitter;
+        }
+        .telegram{
+            grid-area: telegram;
+        }
 
 /*
 __________________________________________________
@@ -158,7 +199,7 @@ __________________________________________________
                 "asmenu    asmenu     asmenu"
                 "donatit   donatit    donatit"
                 "donatxt   donatxt    donatxt"
-                "donabutt       donabutt         donabutt";
+                "donabutt  donabutt   donabutt";
     display: inline-grid;
 }
 
@@ -218,6 +259,55 @@ __________________________________________________
 .dona{
     grid-area: donabutt;
 }
+
+/*
+__________________________________________________
+                        REGISTER
+ _________________________________________________
+ */
+
+.grid-padre-register{
+    display: grid;
+    grid-template-columns: repeat(12, 7.88%);
+    grid-template-rows: repeat(12,auto);
+    grid-column-gap: .5%;
+    grid-row-gap: .5%;
+    grid-template-areas:
+      "hdgen    hdgen       hdgen      hdgen  hdgen   hdgen   hdgen   hdgen   hdgen   hdgen   hdgen  hdgen"
+      ".        navgen      navgen     navgen navgen  navgen  navgen  navgen  navgen  navgen  navgen ."
+      "main        main        main    main   main    main    main    main    main    main    main   main"
+      "main        main        main    main   main    main    main    main    main    main    main   main"
+      "main        main        main    main   main    main    main    main    main    main    main    main"
+      "main        main        main    main   main    main    main    main    main    main    main    main"
+      "main        main        main    main   main    main    main    main    main    main    main    main"
+      "main        main        main    main   main    main    main    main    main    main    main    main"
+      "main        main        main    main   main    main    main    main    main    main    main    main"
+      "main        main        main    main   main    main    main    main    main    main    main    main"
+      '.        .           .      .       .       .       .       .       .       .       .       .'
+      "ftgen    ftgen       ftgen  ftgen   ftgen   ftgen   ftgen   ftgen   ftgen   ftgen   ftgen   ftgen";
+
+}
+
+
+.grid-main--register{
+    grid-area: main;
+    grid-template-areas:
+                ".          sectitindx sectitindx sectitindx sectitindx ."
+                "sectxtindx sectxtindx sectxtindx sectxtindx sectxtindx sectxtindx"
+                "sectxtindx sectxtindx sectxtindx sectxtindx sectxtindx sectxtindx"
+                "secimgindx secimgindx secimgindx secimgindx secimgindx secimgindx"
+                "secimgindx secimgindx secimgindx secimgindx secimgindx secimgindx"
+                "secimgindx secimgindx secimgindx secimgindx secimgindx secimgindx"
+                "secimgindx secimgindx secimgindx secimgindx secimgindx secimgindx"
+                "secimgindx secimgindx secimgindx secimgindx secimgindx secimgindx";
+    display: grid;
+}
+
+.grid-
+
+
+
+
 /*--------------------------------------------------------------------------*/
 /* MOBILE */
 /* -------  INDEX */
@@ -225,9 +315,13 @@ __________________________________________________
 
 /*(1366x768) Pantalla clase*/
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 800px) {
     * {
-        font-size: 1rem;
+        font-size: 0.8rem;
+    }
+    svg{
+        width: 70%;
+        height: 70%;
     }
     .grid-aside--index {
         display: none;
@@ -241,30 +335,51 @@ __________________________________________________
         grid-column-gap: .5%;
         grid-row-gap: .5%;
         grid-template-areas:
-      "hdgen    hdgen   hdgen   hdgen   hdgen   hdgen   hdgen   hdgen   hdgen   hdgen   hdgen   hdgen"
-      ".        navgen  navgen  navgen  navgen  navgen  navgen  navgen  navgen  navgen  navgen  ."
-      ".        .       .       secindx secindx secindx secindx secindx secindx .       .       ."
-      ".        .       .       secindx secindx secindx secindx secindx secindx .       .       ."
-      ".        .       .       secindx secindx secindx secindx secindx secindx .       .       ."
-      ".        .       .       secindx secindx secindx secindx secindx secindx .       .       ."
-      ".        .       .       secindx secindx secindx secindx secindx secindx .       .       ."
-      ".        .       .       secindx secindx secindx secindx secindx secindx .       .       ."
-      ".        .       .       secindx secindx secindx secindx secindx secindx .       .       ."
-      ".        .       .       secindx secindx secindx secindx secindx secindx .       .       ."
-      "ftgen    ftgen   ftgen   ftgen   ftgen   ftgen   ftgen   ftgen   ftgen   ftgen   ftgen   ftgen"
-      "ftgen    ftgen   ftgen   ftgen   ftgen   ftgen   ftgen   ftgen   ftgen   ftgen   ftgen   ftgen";
+      "hdgen    hdgen   hdgen   hdgen       hdgen       hdgen       hdgen       hdgen       hdgen       hdgen   hdgen   hdgen"
+      ".        navgen  navgen  navgen      navgen      navgen      navgen      navgen      navgen      navgen  navgen  ."
+      ".        .       main       main    main    main    main    main    main    main       .       ."
+      ".        .       main       main    main    main    main    main    main    main       .       ."
+      ".        .       .       main    main    main    main    main    main    .       .       ."
+      ".        .       .       main    main    main    main    main    main    .       .       ."
+      ".        .       .       main    main    main    main    main    main    .       .       ."
+      ".        .       .       main    main    main    main    main    main    .       .       ."
+      ".        .       .       main    main    main    main    main    main    .       .       ."
+      ".        .       .       main    main    main    main    main    main    .       .       ."
+      "ftgen    ftgen   ftgen   ftgen       ftgen       ftgen       ftgen       ftgen       ftgen       ftgen   ftgen   ftgen"
+      "ftgen    ftgen   ftgen   ftgen       ftgen       ftgen       ftgen       ftgen       ftgen       ftgen   ftgen   ftgen";
 
     }
 
+    .grid-main--index{
+        grid-area: main;
+        display: grid;
+        grid-template-areas:
+
+    ".       secindx secindx secindx secindx ."
+    "secindx secindx secindx secindx secindx secindx"
+    "secindx secindx secindx secindx secindx secindx"
+    "secindx secindx secindx secindx secindx secindx"
+    "secindx secindx secindx secindx secindx secindx"
+    "secindx secindx secindx secindx secindx secindx"
+    "secindx secindx secindx secindx secindx secindx"
+    "secindx secindx secindx secindx secindx secindx";
+
+
+    }
 
 
     .grid-footer {
         grid-area: ftgen;
         display: grid;
+
         align-items: center;
+        align-content: center;
+        justify-content: center;
         grid-template-areas:
-                "doc-legales"
-                "logo-footer  redes-sociales"    }
+
+        "doc-legales       doc-legales       doc-legales       doc-legales doc-legales       doc-legales       doc-legales       doc-legales doc-legales       doc-legales       doc-legales       doc-legales"
+        "logo-footer       redes-sociales       redes-sociales       redes-sociales       redes-sociales       redes-sociales       redes-sociales       redes-sociales";
+    }
 
     .logo-titulo-footer {
         grid-area: logo-footer;
@@ -274,12 +389,12 @@ __________________________________________________
 
     .doc-legales {
         grid-area: doc-legales;
+        display: grid;
+        grid-template: ". aviso-legal aviso-legal aviso-legal cookies cookies cookies cookies  politicas politicas politicas .";
     }
 
 
-    .redes-sociales {
-        grid-area: redes-sociales;
-    }
+
 }
 /*
 
