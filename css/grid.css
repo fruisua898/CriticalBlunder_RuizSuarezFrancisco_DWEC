@@ -17,14 +17,14 @@ __________________________________________________
       ".        navgen      navgen  navgen  navgen  navgen  navgen  navgen  navgen  navgen  navgen ."
       ".        main        main    main    main    main    main    main    main    main    main   ."
       ".        main        main    main    main    main    main    main    main    main    main   ."
-      ".        main        main   main    main    main    main    main    main    main    main    ."
-      ".        main        main   main    main    main    main    main    main    main    main    ."
-      ".        main        main   main    main    main    main    main    main    main    main    ."
-      ".        main        main   main    main    main    main    main    main    main    main    ."
-      ".        main        main   main    main    main    main    main    main    main    main    ."
-      ".        main        main   main    main    main    main    main    main    main    main    ."
-      '.        .           .      .       .       .       .       .       .       .       .       .'
-      "ftgen    ftgen       ftgen  ftgen   ftgen   ftgen   ftgen   ftgen   ftgen   ftgen   ftgen   ftgen";
+      ".        main        main    main    main    main    main    main    main    main    main    ."
+      ".        main        main    main    main    main    main    main    main    main    main    ."
+      ".        main        main    main    main    main    main    main    main    main    main    ."
+      ".        main        main    main    main    main    main    main    main    main    main    ."
+      ".        main        main    main    main    main    main    main    main    main    main    ."
+      ".        main        main    main    main    main    main    main    main    main    main    ."
+      '.        .           .       .       .       .       .       .       .       .       .       .'
+      "ftgen    ftgen       ftgen   ftgen   ftgen   ftgen   ftgen   ftgen   ftgen   ftgen   ftgen   ftgen";
 
 }
 
@@ -273,7 +273,7 @@ __________________________________________________
     grid-column-gap: .5%;
     grid-row-gap: .5%;
     grid-template-areas:
-      "hdgen       hdgen       hdgen      hdgen  hdgen   hdgen   hdgen   hdgen   hdgen   hdgen   hdgen  hdgen"
+      "hdgen       hdgen       hdgen   hdgen  hdgen   hdgen   hdgen   hdgen   hdgen   hdgen   hdgen  hdgen"
       "main        main        main    main   main    main    main    main    main    main    main   main"
       "main        main        main    main   main    main    main    main    main    main    main   main"
       "main        main        main    main   main    main    main    main    main    main    main    main"
@@ -416,6 +416,117 @@ __________________________________________________
             .s-inp{
                 grid-area: sinp;
             }
+
+
+/*
+__________________________________________________
+                        VADEMECUM
+ _________________________________________________
+ */
+
+.grid-main--vademecum{
+    grid-area: main;
+    display: inline-grid;
+    grid-auto-flow: row;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    grid-template-areas:
+
+    ".        filter    filter  filter  filter  filter  filter  filter    filter    filter    filter    menudes"
+    ".        secover   secover secover secover secover secover secover   secover   secover   secover   menudes"
+    ".        secover   secover secover secover secover secover secover   secover   secover   secover   menudes"
+    ".        secover   secover secover secover secover secover secover   secover   secover   secover   menudes"
+    ".        secover   secover secover secover secover secover secover   secover   secover   secover   menudes"
+    ".        secover   secover secover secover secover secover secover   secover   secover   secover   menudes"
+    ".        secover   secover secover secover secover secover secover   secover   secover   secover   menudes"
+    ".        secover   secover secover secover secover secover secover   secover   secover   secover   menudes";
+
+    grid-gap: .5%;
+}
+.section-filter--vademecum{
+    grid-area: filter;
+    display: inline-grid;
+    grid-auto-flow: row;
+    align-content: center;
+
+    align-items: center;
+    grid-template-areas:
+        " s-nombre    f-campaign    .  s-criterio  s-submit    .  .    .    go-monster    go-equip";
+}
+
+    .busca-nombre{
+        grid-area: s-nombre;
+    }
+    .filtro-campaign{
+        grid-area: f-campaign;
+    }
+    .crit-busca{
+        grid-area: s-criterio;
+    }
+    .submit-busca{
+        grid-area: s-submit;
+    }
+    .boton-bestiario--vademecum{
+        grid-area: go-monster;
+    }
+    .boton-equipamiento--vademecum{
+        grid-area: go-equip;
+    }
+
+.section-overlay--vademecum{
+    grid-area: secover;
+    display: inline-grid;
+    grid-auto-flow: row;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    grid-template-areas:
+        "itemsvad       itemsvad    itemsvad    itemsvad    itemsvad    itemsvad    itemsvad    itemsvad    itemsvad    itemsvad"
+        "itemsvad       itemsvad    itemsvad    itemsvad    itemsvad    itemsvad    itemsvad    itemsvad    itemsvad    itemsvad"
+        "pitems         pitems      pitems      pitems      pitems      pitems      pitems      pitems      pitems      pitems"
+        "monstervad     monstervad  monstervad  monstervad  monstervad  monstervad  monstervad  monstervad  monstervad  monstervad"
+        "monstervad     monstervad  monstervad  monstervad  monstervad  monstervad  monstervad  monstervad  monstervad  monstervad"
+        "pmonsters      pmonsters   pmonsters   pmonsters   pmonsters   pmonsters   pmonsters   pmonsters   pmonsters   pmonsters";
+    display: inline-grid;
+}
+
+
+    .items-overlay--vademecum{
+        grid-area: itemsvad;
+    }
+    .items-explain--vademecum{
+        grid-area: pitems;
+    }
+
+    .monsters-overlay--vademecum{
+        grid-area: monstervad;
+    }
+
+    .monster-explain--vademecum{
+        grid-area: pmonsters;
+    }
+
+.menu-desplegable{
+    grid-area: menudes;
+    display: grid;
+    align-items: end;
+    grid-template-areas:
+                        "."
+                        "."
+                        "."
+                        "menusvg"
+                        "menusvg"
+                        "."
+                        "."
+                        ".";
+}
+
+.svgdesplegable{
+    grid-area: menusvg;
+
+}
+
 
 
 /*--------------------------------------------------------------------------*/

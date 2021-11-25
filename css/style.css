@@ -133,7 +133,7 @@ a:visited,footer>ul>li>a:visited{
     div>h2.welcome-reg , div>h2.crea-account{
         font-size: 1.5rem;
     }
-    form{
+    .grid-form--register{
         padding: 1rem;
     }
 }
@@ -164,7 +164,7 @@ div > h2{
     margin-bottom: 2rem;
 }
 
-form {
+.grid-form--register {
 
     border-width: 0.1rem;
     border-style: solid;
@@ -180,7 +180,7 @@ form {
     max-width: 90%;
 }
 
-input ,form > div > button {
+input ,.grid-form--register > div > button {
     border-color: var(--azul-oscuro);
     background: var(--gris-oscuro-opa);
     color: var(--gris-claro);
@@ -215,4 +215,22 @@ form > div > button, .t-inp, .b-inp {
 
 .s-lab, .s-inp{
     font-size: 1rem;
+}
+
+/*
+VADEMECUM
+*/
+
+.monsters-overlay--vademecum, .items-overlay--vademecum{
+
+    width: 76.3125rem;
+    height: 12.9375rem;
+    border-radius: 3.438rem;
+    margin: 0.5rem 10rem 0.5rem  10rem;
+}
+
+.grid-main--vademecum{
+    resize: horizontal;
+    min-width: 50px;
+
 }
