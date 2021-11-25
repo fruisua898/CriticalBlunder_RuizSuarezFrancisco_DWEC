@@ -39,57 +39,50 @@
 
 </header>
 
-<nav class="grid-nav">
 
-    <ul class="grid-menu--top">
-        <li class="inicio-nav" ><a id="here" href="">Inicio</a></li>
-        <li class="vademecum-nav" ><a href="">Vademecum</a></li>
-        <li class="tabletop-nav"><a  href="">Tabletop</a></li>
-        <li class="support-nav"><a  href="">Contacto</a></li>
-        <li class="login-nav"><a  href="">Login <i class="fas fa-caret-down"></i><!--svg width="15" height="8" viewBox="0 0 15 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.624939 0.75L7.49994 7.625L14.3749 0.75H0.624939Z" fill="#BAC6BA"/></svg-->
-
-        </a></li>
-    </ul>
-</nav>
 <main class="grid-main--register">
 
 
-    <form>
-        <h2>CREA UNA CUENTA</h2>
-        <h2>Bienvenido a Critical Blunder</h2>
-        <p>
-            <label for="usuario">Usuario</label>
-            <input type="text" name="usuario" id="usuario">
+    <form class="grid-form--register">
+        <div class="form-bienvenida--register">
+            <h2 class="crea-account">CREA UNA CUENTA</h2>
+            <h2 class="welcome-reg">Bienvenido a Critical Blunder</h2>
+        </div>
+
+        <p class="usuario--register">
+            <label class="u-lab" for="usuario">Usuario</label>
+            <input class="u-inp" type="text" name="usuario" id="usuario">
         </p>
 
-        <p>
-            <label for="correo">Dirección de correo electrónico</label>
-            <input type="email" name="correo" id="correo">
+        <p class="correo--register">
+            <label class="e-lab" for="correo">Dirección de correo electrónico</label>
+            <input class="e-inp" type="email" name="correo" id="correo">
         </p>
 
-        <p>
-            <label for="psw">Contraseña</label>
-            <input type="password" name="psw" id="psw">
+        <p class="password--register">
+            <label class="p-lab" for="psw">Contraseña</label>
+            <input class="p-inp" type="password" name="psw" id="psw">
         </p>
 
-        <p>
-            <label for="repeat-psw">Contraseña</label>
-            <input type="password" name="repeat-psw" id="repeat-psw">
+        <p class="repeat-password-register">
+            <label class="rp-lab" for="repeat-psw">Contraseña</label>
+            <input class="rp-inp" type="password" name="repeat-psw" id="repeat-psw">
         </p>
 
-        <p>
-            <input type="checkbox" name="boletin" id="boletin">
-            <label for="boletin">Quiero unirme al boletín de Critical Blunder para estar al día de las últimas novedades.</label>
+        <p class="boletin--register">
+            <input class="b-inp" type="checkbox" name="boletin" id="boletin">
+            <label class="b-lab" for="boletin">Quiero unirme al boletín de Critical Blunder para estar al día de las últimas novedades.</label>
         </p>
 
-        <p>
-            <input type="checkbox" name="terminos" id="terminos">
-            <label for="terminos">Estoy de acuerdo con los terminos de Critical Blunder.</label>
+        <p class="terminos--register">
+            <input class="t-inp" type="checkbox" name="terminos" id="terminos">
+            <label class="t-lab" for="terminos">Estoy de acuerdo con los terminos de Critical Blunder.</label>
         </p>
 
-
-        <button type="submit" name="submit" >Crear una cuenta</button>
-        <button type="submit" name="submit" >Crear una cuenta con Gmail <i class="fab fa-google"></i></button>
+        <div class="submit--register">
+            <button class="s-lab" type="submit" name="submit" >Crear una cuenta</button>
+            <button class="s-inp" type="submit" name="submit" >Crear una cuenta con <i class="fab fa-google"></i>mail </button>
+        </div>
     </form>
 
 
