@@ -229,6 +229,14 @@ VADEMECUM
     margin: 0.5rem 10rem 0.5rem  10rem;
 }
 
+        .monsters-overlay--vademecum{
+            background-image: url(../img/monsters.png);
+        }
+        .items-overlay--vademecum{
+            background-image: url(../img/items.png);
+        }
+
+
 .grid-main--vademecum{
     resize: horizontal;
     min-width: 50px;
