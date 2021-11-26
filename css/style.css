@@ -238,7 +238,7 @@ VADEMECUM
 
 
 .grid-main--vademecum{
-    resize: horizontal;
-    min-width: 50px;
+    resize: both;  /*Revisar, seguramente niet*/
+    min-width: 50px; /* Niet */
 
 }

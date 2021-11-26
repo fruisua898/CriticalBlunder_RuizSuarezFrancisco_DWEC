@@ -268,6 +268,8 @@ __________________________________________________
 
 .grid-padre-register{
     display: grid;
+    width: 100vw;
+    height: 100vh;
     grid-template-columns: repeat(12, 7.88%);
     grid-template-rows: repeat(15,auto);
     grid-column-gap: .5%;
@@ -488,7 +490,7 @@ __________________________________________________
         "monstervad     monstervad  monstervad  monstervad  monstervad  monstervad  monstervad  monstervad  monstervad  monstervad"
         "monstervad     monstervad  monstervad  monstervad  monstervad  monstervad  monstervad  monstervad  monstervad  monstervad"
         "pmonsters      pmonsters   pmonsters   pmonsters   pmonsters   pmonsters   pmonsters   pmonsters   pmonsters   pmonsters";
-    display: inline-grid;
+
 }
 
 
@@ -551,6 +553,8 @@ __________________________________________________
     .grid-padre {
 
         display: grid;
+        width: 100vw;
+        height: 100vh;
         grid-template-columns: repeat(12, 7.88%);
         grid-template-rows: repeat(12, auto);
         grid-column-gap: .5%;
