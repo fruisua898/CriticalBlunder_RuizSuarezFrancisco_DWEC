@@ -9,13 +9,13 @@ GENERICOS
     display: grid;
     width: 100vw;
     height: 100vh;
-    grid-template-columns: repeat(12, minmax(100px,1fr));
+    grid-template-columns: repeat(12,minmax(1rem,1fr));
     grid-template-rows: repeat(12,auto);
     grid-column-gap: .5%;
     grid-row-gap: .5%;
     grid-template-areas:
-      "hdgen    hdgen       hdgen   hdgen   hdgen   hdgen   hdgen   hdgen   hdgen   hdgen   hdgen   hdgen"
-      ".        navgen      navgen  navgen  navgen  navgen  navgen  navgen  navgen  navgen  navgen  ."
+      "hdgen        hdgen       hdgen   hdgen   hdgen   hdgen   hdgen   hdgen   hdgen   hdgen   hdgen   hdgen"
+      ".            navgen      navgen  navgen  navgen  navgen  navgen  navgen  navgen  navgen  navgen  ."
       "main         main        main    main    main    main    main    main    main    main    main    main"
       "main         main        main    main    main    main    main    main    main    main    main    main"
       "main         main        main    main    main    main    main    main    main    main    main    main"
@@ -478,12 +478,11 @@ __________________________________________________
     ". filter  filter  filter  filter  filter    filter    filter   filter  filter  filter  filter"
     ". secover secover secover secover secover   secover   secover  secover secover secover secover"
     ". secover secover secover secover secover   secover   secover  secover secover secover secover"
-    ". secover secover secover secover secover   secover   secover  secover secover  secover secover"
+    ". secover secover secover secover secover   secover   secover  secover secover secover secover"
     ". secover secover secover secover secover   secover   secover  secover secover secover secover"
     ". secover secover secover secover secover   secover   secover  secover secover secover secover"
     ". secover secover secover secover secover   secover   secover  secover secover secover secover"
     ". secover secover secover secover secover   secover   secover  secover secover secover secover";
-
     grid-gap: .5%;
 }
 .section-filter--vademecum{
@@ -525,13 +524,13 @@ __________________________________________________
     justify-content: center;
     align-items: center;
     grid-template-areas:
-        ".  .   .  itemsvad     itemsvad    itemsvad    itemsvad    itemsvad    .   .   .   menusvg"
-        ".  .   .  itemsvad     itemsvad    itemsvad    itemsvad    itemsvad    .   .   .   menusvg"
-        ".  .   .  pitems       pitems      pitems      pitems      pitems      .   .   .   menusvg"
-        ".  .   .  monstervad   monstervad  monstervad  monstervad  monstervad  .   .   .   menusvg"
-        ".  .   .  monstervad   monstervad  monstervad  monstervad  monstervad  .   .   .   menusvg"
-        ".  .   .  pmonsters    pmonsters   pmonsters   pmonsters   pmonsters   .   .   .   menusvg"
-        ".  .   .  .            .           .           .           .           .   .   .   .";
+        "  .   .  itemsvad     itemsvad    itemsvad    itemsvad    itemsvad    .   .   .   menusvg"
+        "  .   .  itemsvad     itemsvad    itemsvad    itemsvad    itemsvad    .   .   .   menusvg"
+        "  .   .  pitems       pitems      pitems      pitems      pitems      .   .   .   menusvg"
+        "  .   .  monstervad   monstervad  monstervad  monstervad  monstervad  .   .   .   menusvg"
+        "  .   .  monstervad   monstervad  monstervad  monstervad  monstervad  .   .   .   menusvg"
+        "  .   .  pmonsters    pmonsters   pmonsters   pmonsters   pmonsters   .   .   .   menusvg"
+        "  .   .  .            .           .           .           .           .   .   .   .";
 
 
 }
@@ -562,6 +561,33 @@ __________________________________________________
         display: grid;
         grid-area: menusvg;
     }
+/* Cargando seleccion de equipamientos con AJAX*/
+
+.section-overlay-items--vademecum {
+    grid-area: secover;
+    display: inline-grid;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    grid-template-areas:
+        ".  mundvad   mundvad  mundvad    mundvad    .    magicvad    magicvad    magicvad   magicvad   ."
+        ".  mundvad   mundvad  mundvad    mundvad    .    magicvad    magicvad    magicvad   magicvad   ."
+        ".  mundvad   mundvad  mundvad    mundvad    .    magicvad    magicvad    magicvad   magicvad   ."
+        ".  mundvad   mundvad  mundvad    mundvad    .    magicvad    magicvad    magicvad   magicvad   ."
+        ".  mundvad   mundvad  mundvad    mundvad    .    magicvad    magicvad    magicvad   magicvad   ."
+        ".  mundvad   mundvad  mundvad    mundvad    .    magicvad    magicvad    magicvad   magicvad   ."
+        ".  mundvad   mundvad  mundvad    mundvad    .    magicvad    magicvad    magicvad   magicvad   .";
+}
+
+
+.items-mundano--vademecum{
+    grid-area: mundvad;
+}
+
+.items-magico--vademecum{
+    grid-area: magicvad;
+}
+
 
 
 
@@ -655,6 +681,7 @@ __________________________________________________
     .grid-nav{
         display: none;
     }
+
 
 
 }

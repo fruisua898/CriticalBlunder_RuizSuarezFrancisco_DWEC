@@ -5,6 +5,12 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    background: none;
+    color: inherit;
+    border: none;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
 }
 html,body{
     margin:0;
@@ -16,7 +22,7 @@ body{
     background-color: var(--gris-oscuro);
     font-family: var(--texto);
     color: var(--gris-claro);
-    overflow-x: hidden; /*Trabajo de investigación exhaustivo, sigo sin estar seguro de si esta práctica es buena o mala, simplemente el navegador fastidia bastante
+    /*overflow-x: hidden; Trabajo de investigación exhaustivo, sigo sin estar seguro de si esta práctica es buena o mala, simplemente el navegador fastidia bastante
     con un 100vw de viewport que en resumen es 100% de la pantalla. No obstante el navegador tiene en cuenta la scrollball, lo que provoca un overflow. Con esta
     propiedad se evita el overflow*/
 
@@ -247,9 +253,9 @@ select {
     padding: 0.5rem;
 }
 .items-explain--vademecum,.monster-explain--vademecum, .section-filter--vademecum>input, .section-filter--vademecum>button, .section-filter--vademecum>select{
-    font-size: 1.5rem;
+    font-size: 1rem;
     margin: 1rem 1rem 1rem 1rem;
-
+    resize: both;
 }
 
 .section-filter--vademecum{
@@ -283,7 +289,6 @@ button.submit-busca{
     height: 3.125rem;
     border-radius: 0.938rem;
 }
-
 
 
 
