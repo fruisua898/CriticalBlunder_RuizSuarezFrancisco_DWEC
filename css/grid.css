@@ -1,22 +1,54 @@
 @import url(root.css);
 
+
 /*
-__________________________________________________
-GENÉRICOS DESKTOP
-__________________________________________________
+GENERICOS
 */
 
 .grid-padre{
     display: grid;
-    grid-template-columns: repeat(12, 7.88%);
+    width: 100vw;
+    height: 100vh;
+    grid-template-columns: repeat(12, minmax(100px,1fr));
     grid-template-rows: repeat(12,auto);
     grid-column-gap: .5%;
     grid-row-gap: .5%;
     grid-template-areas:
-      "hdgen    hdgen       hdgen   hdgen   hdgen   hdgen   hdgen   hdgen   hdgen   hdgen   hdgen  hdgen"
-      ".        navgen      navgen  navgen  navgen  navgen  navgen  navgen  navgen  navgen  navgen ."
-      ".        main        main    main    main    main    main    main    main    main    main   ."
-      ".        main        main    main    main    main    main    main    main    main    main   ."
+      "hdgen    hdgen       hdgen   hdgen   hdgen   hdgen   hdgen   hdgen   hdgen   hdgen   hdgen   hdgen"
+      ".        navgen      navgen  navgen  navgen  navgen  navgen  navgen  navgen  navgen  navgen  ."
+      "main         main        main    main    main    main    main    main    main    main    main    main"
+      "main         main        main    main    main    main    main    main    main    main    main    main"
+      "main         main        main    main    main    main    main    main    main    main    main    main"
+      "main         main        main    main    main    main    main    main    main    main    main    main"
+      "main         main        main    main    main    main    main    main    main    main    main    main"
+      "main         main        main    main    main    main    main    main    main    main    main    main"
+      "main         main        main    main    main    main    main    main    main    main    main    main"
+      "main         main        main    main    main    main    main    main    main    main    main    main"
+      '.            .           .       .       .       .       .       .       .       .       .       .'
+      "ftgen        ftgen       ftgen   ftgen   ftgen   ftgen   ftgen   ftgen   ftgen   ftgen   ftgen   ftgen";
+
+}
+
+
+/*
+__________________________________________________
+INDEX
+__________________________________________________
+*/
+
+.grid-padre--index{
+    display: grid;
+    width: 100vw;
+    height: 100vh;
+    grid-template-columns: repeat(12, minmax(100px,1fr));
+    grid-template-rows: repeat(12,auto);
+    grid-column-gap: .5%;
+    grid-row-gap: .5%;
+    grid-template-areas:
+      "hdgen    hdgen       hdgen   hdgen   hdgen   hdgen   hdgen   hdgen   hdgen   hdgen   hdgen   hdgen"
+      ".        navgen      navgen  navgen  navgen  navgen  navgen  navgen  navgen  navgen  navgen  ."
+      ".        main        main    main    main    main    main    main    main    main    main    ."
+      ".        main        main    main    main    main    main    main    main    main    main    ."
       ".        main        main    main    main    main    main    main    main    main    main    ."
       ".        main        main    main    main    main    main    main    main    main    main    ."
       ".        main        main    main    main    main    main    main    main    main    main    ."
@@ -48,6 +80,15 @@ __________________________________________________
 
     grid-gap: .5%;
 }
+
+
+
+.empty {
+    background: var(--gris-oscuro);
+    grid-area: null;
+}
+
+
 
 /* HEADER */
 
@@ -434,15 +475,14 @@ __________________________________________________
     justify-content: center;
     align-items: center;
     grid-template-areas:
-
-    ".        filter    filter  filter  filter  filter  filter  filter    filter    filter    filter    menudes"
-    ".        secover   secover secover secover secover secover secover   secover   secover   secover   menudes"
-    ".        secover   secover secover secover secover secover secover   secover   secover   secover   menudes"
-    ".        secover   secover secover secover secover secover secover   secover   secover   secover   menudes"
-    ".        secover   secover secover secover secover secover secover   secover   secover   secover   menudes"
-    ".        secover   secover secover secover secover secover secover   secover   secover   secover   menudes"
-    ".        secover   secover secover secover secover secover secover   secover   secover   secover   menudes"
-    ".        secover   secover secover secover secover secover secover   secover   secover   secover   menudes";
+    ". filter  filter  filter  filter  filter    filter    filter   filter  filter  filter  filter"
+    ". secover secover secover secover secover   secover   secover  secover secover secover secover"
+    ". secover secover secover secover secover   secover   secover  secover secover secover secover"
+    ". secover secover secover secover secover   secover   secover  secover secover  secover secover"
+    ". secover secover secover secover secover   secover   secover  secover secover secover secover"
+    ". secover secover secover secover secover   secover   secover  secover secover secover secover"
+    ". secover secover secover secover secover   secover   secover  secover secover secover secover"
+    ". secover secover secover secover secover   secover   secover  secover secover secover secover";
 
     grid-gap: .5%;
 }
@@ -454,7 +494,8 @@ __________________________________________________
 
     align-items: center;
     grid-template-areas:
-        " s-nombre    f-campaign    .  s-criterio  s-submit    .  .    .    go-monster    go-equip";
+
+        "s-nombre    f-campaign     s-criterio  s-submit           go-monster    go-equip";
 }
 
     .busca-nombre{
@@ -484,12 +525,14 @@ __________________________________________________
     justify-content: center;
     align-items: center;
     grid-template-areas:
-        "itemsvad       itemsvad    itemsvad    itemsvad    itemsvad    itemsvad    itemsvad    itemsvad    itemsvad    itemsvad"
-        "itemsvad       itemsvad    itemsvad    itemsvad    itemsvad    itemsvad    itemsvad    itemsvad    itemsvad    itemsvad"
-        "pitems         pitems      pitems      pitems      pitems      pitems      pitems      pitems      pitems      pitems"
-        "monstervad     monstervad  monstervad  monstervad  monstervad  monstervad  monstervad  monstervad  monstervad  monstervad"
-        "monstervad     monstervad  monstervad  monstervad  monstervad  monstervad  monstervad  monstervad  monstervad  monstervad"
-        "pmonsters      pmonsters   pmonsters   pmonsters   pmonsters   pmonsters   pmonsters   pmonsters   pmonsters   pmonsters";
+        ".  .   .  itemsvad     itemsvad    itemsvad    itemsvad    itemsvad    .   .   .   menusvg"
+        ".  .   .  itemsvad     itemsvad    itemsvad    itemsvad    itemsvad    .   .   .   menusvg"
+        ".  .   .  pitems       pitems      pitems      pitems      pitems      .   .   .   menusvg"
+        ".  .   .  monstervad   monstervad  monstervad  monstervad  monstervad  .   .   .   menusvg"
+        ".  .   .  monstervad   monstervad  monstervad  monstervad  monstervad  .   .   .   menusvg"
+        ".  .   .  pmonsters    pmonsters   pmonsters   pmonsters   pmonsters   .   .   .   menusvg"
+        ".  .   .  .            .           .           .           .           .   .   .   .";
+
 
 }
 
@@ -499,35 +542,26 @@ __________________________________________________
     }
     .items-explain--vademecum{
         grid-area: pitems;
+        display: grid;
+        justify-content: center;
     }
 
     .monsters-overlay--vademecum{
         grid-area: monstervad;
+
     }
 
     .monster-explain--vademecum{
         grid-area: pmonsters;
+        display: grid;
+        justify-content: center;
     }
 
-.menu-desplegable{
-    grid-area: menudes;
-    display: grid;
-    align-items: end;
-    grid-template-areas:
-                        "."
-                        "."
-                        "."
-                        "menusvg"
-                        "menusvg"
-                        "."
-                        "."
-                        ".";
-}
 
-.svgdesplegable{
-    grid-area: menusvg;
-
-}
+    .svgdesplegable{
+        display: grid;
+        grid-area: menusvg;
+    }
 
 
 
@@ -540,7 +574,7 @@ __________________________________________________
 
 @media only screen and (max-width: 800px) {
     * {
-        font-size: 0.8rem;
+        font-size: 1rem;
     }
     svg{
         width: 70%;
@@ -550,12 +584,12 @@ __________________________________________________
         display: none;
     }
 
-    .grid-padre {
+    .grid-padre--index {
 
         display: grid;
         width: 100vw;
         height: 100vh;
-        grid-template-columns: repeat(12, 7.88%);
+        grid-template-columns: repeat(12, minmax(0,1fr));
         grid-template-rows: repeat(12, auto);
         grid-column-gap: .5%;
         grid-row-gap: .5%;
@@ -618,18 +652,14 @@ __________________________________________________
         grid-template: ". aviso-legal aviso-legal aviso-legal cookies cookies cookies cookies  politicas politicas politicas .";
     }
 
+    .grid-nav{
+        display: none;
+    }
 
 
 }
-/*
-
-
-
-
-}
-
-
-/*--------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------
+//----------------------- VA
 /*--------------------------------------------------------------------------*/
 
 
