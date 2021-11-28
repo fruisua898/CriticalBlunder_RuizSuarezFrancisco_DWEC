@@ -1,0 +1,126 @@
+/*
+__________________________________________________
+                        VADEMECUM
+ _________________________________________________
+ */
+
+
+.grid-main--vademecum{
+    grid-area: main;
+    display: inline-grid;
+    grid-auto-flow: row;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    grid-template-areas:
+    ". filter  filter  filter  filter  filter    filter    filter   filter  filter  filter  filter"
+    ". secover secover secover secover secover   secover   secover  secover secover secover secover"
+    ". secover secover secover secover secover   secover   secover  secover secover secover secover"
+    ". secover secover secover secover secover   secover   secover  secover secover secover secover"
+    ". secover secover secover secover secover   secover   secover  secover secover secover secover"
+    ". secover secover secover secover secover   secover   secover  secover secover secover secover"
+    ". secover secover secover secover secover   secover   secover  secover secover secover secover"
+    ". secover secover secover secover secover   secover   secover  secover secover secover secover";
+    grid-gap: .5%;
+}
+.section-filter--vademecum{
+    grid-area: filter;
+    display: inline-grid;
+    grid-auto-flow: row;
+    align-content: center;
+
+    align-items: center;
+    grid-template-areas:
+
+        "s-nombre    f-campaign     s-criterio  s-submit           go-monster    go-equip";
+}
+
+.busca-nombre{
+    grid-area: s-nombre;
+}
+.filtro-campaign{
+    grid-area: f-campaign;
+}
+.crit-busca{
+    grid-area: s-criterio;
+}
+.submit-busca{
+    grid-area: s-submit;
+}
+.boton-bestiario--vademecum{
+    grid-area: go-monster;
+}
+.boton-equipamiento--vademecum{
+    grid-area: go-equip;
+}
+
+.section-overlay--vademecum{
+    grid-area: secover;
+    display: inline-grid;
+    grid-auto-flow: row;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    grid-template-areas:
+        "  .   .  itemsvad     itemsvad    itemsvad    itemsvad    itemsvad    .   .   .   menusvg"
+        "  .   .  itemsvad     itemsvad    itemsvad    itemsvad    itemsvad    .   .   .   menusvg"
+        "  .   .  pitems       pitems      pitems      pitems      pitems      .   .   .   menusvg"
+        "  .   .  monstervad   monstervad  monstervad  monstervad  monstervad  .   .   .   menusvg"
+        "  .   .  monstervad   monstervad  monstervad  monstervad  monstervad  .   .   .   menusvg"
+        "  .   .  pmonsters    pmonsters   pmonsters   pmonsters   pmonsters   .   .   .   menusvg"
+        "  .   .  .            .           .           .           .           .   .   .   .";
+}
+
+
+.items-overlay--vademecum{
+    grid-area: itemsvad;
+}
+.items-explain--vademecum{
+    grid-area: pitems;
+    display: inline-grid;
+    justify-content: center;
+}
+
+.monsters-overlay--vademecum{
+    grid-area: monstervad;
+
+}
+
+.monster-explain--vademecum{
+    grid-area: pmonsters;
+    display: grid;
+    justify-content: center;
+    font-size: 10px;
+}
+
+
+.svgdesplegable{
+    display: grid;
+    grid-area: menusvg;
+}
+/* Cargando seleccion de equipamientos con AJAX*/
+
+.section-overlay-items--vademecum {
+    grid-area: secover;
+    display: inline-grid;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    grid-template-areas:
+        ".  mundvad   mundvad  mundvad    mundvad    .    magicvad    magicvad    magicvad   magicvad   ."
+        ".  mundvad   mundvad  mundvad    mundvad    .    magicvad    magicvad    magicvad   magicvad   ."
+        ".  mundvad   mundvad  mundvad    mundvad    .    magicvad    magicvad    magicvad   magicvad   ."
+        ".  mundvad   mundvad  mundvad    mundvad    .    magicvad    magicvad    magicvad   magicvad   ."
+        ".  mundvad   mundvad  mundvad    mundvad    .    magicvad    magicvad    magicvad   magicvad   ."
+        ".  mundvad   mundvad  mundvad    mundvad    .    magicvad    magicvad    magicvad   magicvad   ."
+        ".  mundvad   mundvad  mundvad    mundvad    .    magicvad    magicvad    magicvad   magicvad   .";
+}
+
+
+.items-mundano--vademecum{
+    grid-area: mundvad;
+}
+
+.items-magico--vademecum{
+    grid-area: magicvad;
+}

@@ -17,6 +17,7 @@ html,body{
 }
 
 
+
 body{
 
     background-color: var(--gris-oscuro);
@@ -24,8 +25,9 @@ body{
     color: var(--gris-claro);
     /*overflow-x: hidden; Trabajo de investigación exhaustivo, sigo sin estar seguro de si esta práctica es buena o mala, simplemente el navegador fastidia bastante
     con un 100vw de viewport que en resumen es 100% de la pantalla. No obstante el navegador tiene en cuenta la scrollball, lo que provoca un overflow. Con esta
-    propiedad se evita el overflow*/
+    propiedad se evita el overflow,
 
+    no usar*/
 }
 
 
@@ -42,6 +44,10 @@ h2 {
     margin-bottom: 8%;
     font-size: 1.2rem;
 
+}
+
+.monster-explain--vademecum, .items-explain--vademecum {
+    word-wrap: normal;
 }
 
 
@@ -93,14 +99,13 @@ ul {
     list-style-type: none;
 }
 .grid-nav{
-    font-size: 1.1rem;
+    font-size: 1rem;
     margin-top: 2.5%;
     margin-bottom: 2.5%;
 }
 li>a,a{
     text-decoration: none;
     color: var(--gris-claro);
-    float: left;
     margin: 0 15% 10px 0;
 }
 
@@ -128,13 +133,6 @@ a:visited,footer>ul>li>a:visited{
 .section-title--index, .aside-title, a:visited{
     color: var(--gris-claro);
 }
-
-.redes-sociales {
-    font-size: 2rem;
-}
-
-
-
 
 div > h2{
     display: grid;
@@ -167,12 +165,17 @@ div > h2{
 
 .grid-form--register{
     width: 100%;
-    margin: 2rem 2rem 2rem 2rem;
+    margin: 2rem 0 2rem 0;
     resize: both;
     min-width: 120px;
     max-width: 90vw;
-
 }
+.grid-main--vademecum{
+
+    resize:horizontal;
+}
+
+
 
 form > p > input ,.grid-form--register > div > button {
     border-color: var(--azul-oscuro);
@@ -188,7 +191,6 @@ form > p > input ,.grid-form--register > div > button {
 }
 
 .t-inp, .b-inp {
-    margin-right: 1rem;
     width: 2rem;
     height: 2rem;
 }
@@ -202,6 +204,7 @@ label {
     margin-bottom: 1rem;
     font-size: 1.5rem;
 }
+
 
 form > div > button, .t-inp, .b-inp {
     margin-bottom: 2rem;
@@ -225,9 +228,12 @@ VADEMECUM
 
         .monsters-overlay--vademecum{
             background-image: url(../img/monsters.png);
+            width: 80vw;
         }
         .items-overlay--vademecum{
             background-image: url(../img/items.png);
+            width: 80vw;
+
         }
 
 .monsters-overlay--vademecum,.items-overlay--vademecum {

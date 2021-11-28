@@ -3,7 +3,7 @@ function eleccion_equipo() {
     xhttp.onload = function() {
         document.getElementById("grid-main--vademecum").innerHTML = this.responseText;
     }
-    xhttp.open("GET", "monster.txt", true);
+    xhttp.open("GET", "items.txt", true);
     xhttp.send();
 }
 
@@ -12,6 +12,7 @@ function monstruos() {
     xhttp.onload = function() {
         document.getElementById("grid-main--vademecum").innerHTML = this.responseText;
     }
-    xhttp.open("GET", "monster.txt", true);
+    xhttp.open("GET", "monsters.txt", true);
     xhttp.send();
+
 }

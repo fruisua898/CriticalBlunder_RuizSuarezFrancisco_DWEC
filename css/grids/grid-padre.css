@@ -1,0 +1,190 @@
+@import url(../root.css);
+
+.grid-padre{
+    display: grid;
+    width: 100vw;
+    height: 100vh;
+    grid-template-columns: repeat(12, minmax(100px,1fr));
+    grid-template-rows: repeat(12,auto);
+
+    grid-template-areas:
+      "hdgen        hdgen       hdgen   hdgen   hdgen   hdgen   hdgen   hdgen   hdgen   hdgen   hdgen   hdgen"
+      ".            navgen      navgen  navgen  navgen  navgen  navgen  navgen  navgen  navgen  navgen  ."
+      "main         main        main    main    main    main    main    main    main    main    main    main"
+      "main         main        main    main    main    main    main    main    main    main    main    main"
+      "main         main        main    main    main    main    main    main    main    main    main    main"
+      "main         main        main    main    main    main    main    main    main    main    main    main"
+      "main         main        main    main    main    main    main    main    main    main    main    main"
+      "main         main        main    main    main    main    main    main    main    main    main    main"
+      "main         main        main    main    main    main    main    main    main    main    main    main"
+      "main         main        main    main    main    main    main    main    main    main    main    main"
+      '.            .           .       .       .       .       .       .       .       .       .       .'
+      "ftgen        ftgen       ftgen   ftgen   ftgen   ftgen   ftgen   ftgen   ftgen   ftgen   ftgen   ftgen";
+
+}
+
+/* HEADER */
+
+.grid-header{
+    grid-area: hdgen;
+    display: inline-grid;
+    grid-auto-flow: row;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    grid-template-areas: "logo-header    titulo-header";
+    grid-gap: .5%;
+}
+
+    .logo-header{
+        grid-area: logo-header;
+    }
+
+    .titulo-header{
+        grid-area: titulo-header;
+    }
+
+/* NAV */
+
+.grid-nav{
+    grid-area: navgen;
+    display: grid;
+    grid-template-areas:
+                "menutop  menutop menutop menutop menutop menutop menutop menutop menutop   menutop";
+}
+
+    .grid-menu--top{
+        grid-area: menutop;
+        grid-template-areas:
+                    " indxnav . vadnav . tabnav . supnav .  lognav";
+
+        display: inline-grid;
+
+    }
+
+        .inicio-nav{
+            grid-area: indxnav;
+        }
+        .vademecum-nav{
+            grid-area: vadnav;
+        }
+        .tabletop-nav{
+            grid-area: tabnav;
+        }
+        .support-nav{
+            grid-area: supnav;
+        }
+        .login-nav{
+            grid-area: lognav;
+        }
+
+/* FOOTER */
+
+.grid-footer{
+    grid-area: ftgen;
+    display: grid;
+    align-items: center;
+    grid-template-areas: ". logo-footer doc-legales  doc-legales  doc-legales  . redes-sociales redes-sociales  redes-sociales  redes-sociales  .   ";
+}
+
+    .logo-titulo-footer {
+        grid-area: logo-footer;
+
+        grid-template: "logo-footer";
+    }
+
+    .doc-legales{
+        grid-area: doc-legales;
+        grid-template: "aviso-legal cookies politicas";
+        display: inline-grid;
+    }
+        .aviso_legal{
+            grid-area: aviso-legal;
+        }
+        .cookies{
+            grid-area: cookies;
+        }
+        .politicas{
+            grid-area: politicas;
+        }
+
+    .redes-sociales{
+        grid-area: redes-sociales;
+        grid-template-areas: "instagram facebook  twitter  telegram";
+        display: inline-grid;
+    }
+
+
+        .instagram{
+            grid-area: instagram;
+        }
+        .facebook{
+            grid-area: facebook;
+        }
+        .twitter{
+            grid-area: twitter;
+        }
+        .telegram{
+            grid-area: telegram;
+        }
+
+
+
+/*Media genérica*/
+@media only screen and (max-width: 800px) {
+
+
+    .grid-footer {
+        grid-area: ftgen;
+        display: grid;
+
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+        grid-template-areas:
+
+        "doc-legales       doc-legales          doc-legales         doc-legales     doc-legales         doc-legales         doc-legales         doc-legales     doc-legales         doc-legales       doc-legales       doc-legales"
+        "logo-footer       redes-sociales       redes-sociales      redes-sociales  redes-sociales      redes-sociales      redes-sociales      redes-sociales  redes-sociales      redes-sociales    redes-sociales    redes-sociales";
+    }
+
+    .logo-titulo-footer {
+        grid-area: logo-footer;
+    }
+
+    .doc-legales {
+        grid-area: doc-legales;
+        display: grid;
+        grid-template: ". aviso-legal cookies politicas .";
+
+    }
+
+    .grid-nav{
+        display: none;
+    }
+
+    .redes-sociales{
+        grid-area: redes-sociales;
+    }
+
+
+    .redes-sociales{
+        grid-area: redes-sociales;
+        grid-template-areas: "instagram facebook twitter telegram";
+        display: grid;
+
+    }
+
+    .instagram{
+        grid-area: instagram;
+
+    }
+    .facebook{
+        grid-area: facebook;
+    }
+    .twitter{
+        grid-area: twitter;
+    }
+    .telegram{
+        grid-area: telegram;
+    }
+}

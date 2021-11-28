@@ -1,0 +1,157 @@
+/*
+__________________________________________________
+                        REGISTER
+ _________________________________________________
+ */
+
+.grid-padre-register{
+    display: grid;
+    width: 100vw;
+    height: 100vh;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(15,auto);
+
+    grid-template-areas:
+      "hdgen       hdgen       hdgen   hdgen  hdgen   hdgen   hdgen   hdgen   hdgen   hdgen   hdgen  hdgen"
+      "main        main        main    main   main    main    main    main    main    main    main   main"
+      "main        main        main    main   main    main    main    main    main    main    main   main"
+      "main        main        main    main   main    main    main    main    main    main    main    main"
+      "main        main        main    main   main    main    main    main    main    main    main    main"
+      "main        main        main    main   main    main    main    main    main    main    main    main"
+      "main        main        main    main   main    main    main    main    main    main    main    main"
+      "main        main        main    main   main    main    main    main    main    main    main    main"
+      "main        main        main    main   main    main    main    main    main    main    main    main"
+      "main        main        main    main   main    main    main    main    main    main    main    main"
+      "main        main        main    main   main    main    main    main    main    main    main    main"
+      "main        main        main    main   main    main    main    main    main    main    main    main"
+      "main        main        main    main   main    main    main    main    main    main    main    main"
+      '.        .           .      .       .       .       .       .       .       .       .       .'
+      "ftgen    ftgen       ftgen  ftgen   ftgen   ftgen   ftgen   ftgen   ftgen   ftgen   ftgen   ftgen";
+
+
+}
+
+
+.grid-main--register{
+    grid-area: main;
+    grid-template-areas:
+                ".        .        .    formreg   formreg    formreg    formreg    formreg    formreg    .    .   ."
+                ".        .        .    formreg   formreg    formreg    formreg    formreg    formreg    .    .   ."
+                ".        .        .    formreg   formreg    formreg    formreg    formreg    formreg    .    .   ."
+                ".        .        .    formreg   formreg    formreg    formreg    formreg    formreg    .    .   ."
+                ".        .        .    formreg   formreg    formreg    formreg    formreg    formreg    .    .   ."
+                ".        .        .    formreg   formreg    formreg    formreg    formreg    formreg    .    .   ."
+                ".        .        .    formreg   formreg    formreg    formreg    formreg    formreg    .    .   ."
+                ".        .        .    formreg   formreg    formreg    formreg    formreg    formreg    .    .   ."
+                ".        .        .    formreg   formreg    formreg    formreg    formreg    formreg    .    .   ."
+                ".        .        .    formreg   formreg    formreg    formreg    formreg    formreg    .    .   ."
+                ".        .        .    formreg   formreg    formreg    formreg    formreg    formreg    .    .   ."
+                ".        .        .    formreg   formreg    formreg    formreg    formreg    formreg    .    .   .";
+    display: grid;
+}
+
+.grid-form--register{
+    grid-area: formreg;
+    grid-template-areas:
+                ".        .        .    welcomereg  welcomereg  welcomereg  welcomereg  welcomereg   welcomereg .    .   ."
+                ".        .        .    userreg     userreg     userreg     userreg     userreg     userreg     .    .   ."
+                ".        .        .    userreg     userreg     userreg     userreg     userreg     userreg     .    .   ."
+                ".        .        .    emailreg    emailreg    emailreg    emailreg    emailreg    emailreg    .    .   ."
+                ".        .        .    emailreg    emailreg    emailreg    emailreg    emailreg    emailreg    .    .   ."
+                ".        .        .    passreg     passreg     passreg     passreg     passreg     passreg     .    .   ."
+                ".        .        .    passreg     passreg     passreg     passreg     passreg     passreg     .    .   ."
+                ".        .        .    passreg2    passreg2    passreg2    passreg2    passreg2    passreg2    .    .   ."
+                ".        .        .    passreg2    passreg2    passreg2    passreg2    passreg2    passreg2    .    .   ."
+                ".        .        .    newsreg     newsreg     newsreg     newsreg     newsreg     newsreg     .    .   ."
+                ".        .        .    newsreg     newsreg     newsreg     newsreg     newsreg     newsreg     .    .   ."
+                ".        .        .    terminosreg terminosreg terminosreg terminosreg terminosreg terminosreg .    .   ."
+                ".        .        .    terminosreg terminosreg terminosreg terminosreg terminosreg terminosreg .    .   ."
+                ".        .        .    submitreg   submitreg   submitreg   submitreg   submitreg   submitreg   .    .   ."
+                ".        .        .    submitreg   submitreg   submitreg   submitreg   submitreg   submitreg   .    .   .";
+    display: grid;
+    grid-auto-flow: column;
+}
+
+.form-bienvenida--register{
+    grid-area: welcomereg;
+}
+
+.usuario--register{
+    grid-area: userreg;
+    grid-template-areas:
+              "ulab     ulab     ulab     ulab     ulab     ulab"
+              "uinp     uinp     uinp     uinp     uinp     uinp";
+    display: inline-grid;
+}
+.u-lab{
+    grid-area: ulab;
+}
+.u-inp{
+    grid-area: uinp;
+}
+
+.correo--register{
+    grid-area: emailreg;
+    grid-template-areas:
+              "elab     elab     elab     elab     elab     elab"
+              "einp     einp     einp     einp     einp     einp";
+    display: inline-grid;
+}
+.e-lab{
+    grid-area: elab;
+}
+.e-inp{
+    grid-area: einp;
+}
+
+.password--register{
+    grid-area: passreg;
+    grid-template-areas:
+              "plab     plab     plab     plab     plab     plab"
+              "pinp     pinp     pinp     pinp     pinp     pinp";
+    display: inline-grid;
+}
+.p-lab{
+    grid-area: plab;
+}
+.p-inp{
+    grid-area: pinp;
+}
+
+.repeat-password-register{
+    grid-area: passreg2;
+    grid-template-areas:
+              "rplab     rplab     rplab     rplab     rplab     rplab"
+              "rpinp     rpinp     rpinp     rpinp     rpinp     rpinp";
+    display: inline-grid;
+}
+
+.rp-lab{
+    grid-area: rplab;
+}
+.rp-inp{
+    grid-area: rpinp;
+}
+
+.boletin--register{
+    grid-area: newsreg;
+}
+
+
+.terminos--register{
+    grid-area: terminosreg;
+}
+
+.submit--register{
+    grid-area: submitreg;
+    grid-template-areas:
+              "slab     slab     slab     slab     slab     slab"
+              "sinp     sinp     sinp     sinp     sinp     sinp";
+    display: inline-grid;
+}
+.s-lab{
+    grid-area: slab;
+}
+.s-inp{
+    grid-area: sinp;
+}
