@@ -3,4 +3,15 @@
     margin-left: 1rem;
     margin-right: 1rem;
 }
+td{
+    width: 10vw;
+    padding: 1rem;
+}
+thead > td {
+    font-weight: bold;
+}
 
+#escribir-monstruos {
+
+    overflow-x: auto;
+}

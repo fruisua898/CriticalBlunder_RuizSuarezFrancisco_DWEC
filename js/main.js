@@ -16,3 +16,52 @@ function monstruos() {
     xhttp.send();
 
 }
+
+
+
+
+
+function mostrar_monstruos(data){
+    let tabla = document.getElementById("escribir-monstruos");
+    const rowtabla = tabla.childElementCount;
+    if (rowtabla>2){
+        monstruos()
+    }
+    for (let i = 0; i < data.results.length; i++) {
+        var tr = document.createElement("tr");
+        tabla.appendChild(tr);
+        var td = document.createElement("td");
+        td.innerHTML = data.results[i].name;
+        tabla.appendChild(td);
+        var td = document.createElement("td");
+        td.innerHTML = data.results[i].type;
+        tabla.appendChild(td);
+        var td = document.createElement("td");
+        td.innerHTML = data.results[i].challenge_rating;
+        tabla.appendChild(td);
+        var hr = document.createElement("hr");
+        tabla.appendChild(hr);
+    }
+
+
+}
+
+
+function recoleccion_monstruos_nombre() {
+    monstruos()
+    fetch('https://api.open5e.com/monsters/?limit=25&ordering=name')
+        .then(monstruos => monstruos.json())
+        .then(data => mostrar_monstruos(data));
+}
+function recoleccion_monstruos_type() {
+    monstruos()
+    fetch('https://api.open5e.com/monsters/?limit=25&ordering=type')
+        .then(monstruos => monstruos.json())
+        .then(data => mostrar_monstruos(data));
+}
+function recoleccion_monstruos_cr() {
+    monstruos()
+    fetch('https://api.open5e.com/monsters/?limit=25&ordering=challenge_rating')
+        .then(monstruos => monstruos.json())
+        .then(data => mostrar_monstruos(data));
+}

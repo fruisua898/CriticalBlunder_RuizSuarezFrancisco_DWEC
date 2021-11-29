@@ -1,0 +1,72 @@
+
+
+/*
+__________________________________________________
+                        VADEMECUM
+ _________________________________________________
+ */
+
+
+.grid-main--vademecum{
+    width: 100vw;
+    grid-area: main;
+    display: grid;
+
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    grid-template-areas:
+    ". filter  filter  filter  filter  filter    filter    filter   filter  filter  filter  filter"
+    ". secover secover secover secover secover   secover   secover  secover secover secover secover"
+    ". secover secover secover secover secover   secover   secover  secover secover secover secover"
+    ". secover secover secover secover secover   secover   secover  secover secover secover secover"
+    ". secover secover secover secover secover   secover   secover  secover secover secover secover"
+    ". secover secover secover secover secover   secover   secover  secover secover secover secover"
+    ". secover secover secover secover secover   secover   secover  secover secover secover secover"
+    ". secover secover secover secover secover   secover   secover  secover secover secover secover";
+    grid-gap: .5%;
+}
+.section-filter--vademecum{
+    grid-area: filter;
+    display: inline-grid;
+    grid-auto-flow: row;
+    align-content: center;
+
+    align-items: center;
+    grid-template-areas:
+
+        "s-nombre    f-campaign     s-criterio  s-submit           go-monster    go-equip";
+}
+
+.busca-nombre{
+    grid-area: s-nombre;
+}
+.filtro-campaign{
+    grid-area: f-campaign;
+}
+.crit-busca{
+    grid-area: s-criterio;
+}
+.submit-busca{
+    grid-area: s-submit;
+}
+.boton-bestiario--vademecum{
+    grid-area: go-monster;
+}
+.boton-equipamiento--vademecum{
+    grid-area: go-equip;
+}
+
+.section-overlay--vademecum{
+    grid-area: secover;
+    display: inline-grid;
+    grid-auto-flow: row;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    grid-template-areas:
+       "tablas  tablas  tablas"
+       "tablas   tablas  tablas";
+}
+
+

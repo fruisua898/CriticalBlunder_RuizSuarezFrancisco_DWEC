@@ -228,11 +228,11 @@ VADEMECUM
 
         .monsters-overlay--vademecum{
             background-image: url(../img/monsters.png);
-            width: 80vw;
+            width: 75vw;
         }
         .items-overlay--vademecum{
             background-image: url(../img/items.png);
-            width: 80vw;
+            width: 75vw;
 
         }
 
@@ -296,13 +296,24 @@ button.submit-busca{
     border-radius: 0.938rem;
 }
 
-
+.monster-explain--vademecum, .items-explain--vademecum{
+    width: 40vw;
+    justify-self: center;
+    font-size: 0.5rem;
+}
 
 /************MEDIAS*************/
 
 @media only screen and (max-width: 939px) {
     .section-title--index{
         font-size: 0.95rem;
+    }
+    .redes-sociales > li > a > svg{
+        width: 5vw;
+    }
+    footer > svg {
+        align-self: start;
+        width: 40vw;
     }
 }
 

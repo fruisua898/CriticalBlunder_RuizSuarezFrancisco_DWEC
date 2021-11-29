@@ -1,3 +1,5 @@
+
+
 /*
 __________________________________________________
                         VADEMECUM
@@ -6,9 +8,10 @@ __________________________________________________
 
 
 .grid-main--vademecum{
+    width: 100vw;
     grid-area: main;
-    display: inline-grid;
-    grid-auto-flow: row;
+    display: grid;
+
     align-content: center;
     justify-content: center;
     align-items: center;
@@ -123,4 +126,57 @@ __________________________________________________
 
 .items-magico--vademecum{
     grid-area: magicvad;
+}
+
+/*--------------------------------------------------------------------------*/
+/* MOBILE */
+/* -------  INDEX */
+/*--------------------------------------------------------------------------*/
+
+/*(1366x768) Pantalla clase*/
+
+@media only screen and (max-width: 1202px) {
+    .grid-aside--index {
+        display: none;
+    }
+
+    .grid-padre--index {
+
+        display: grid;
+        width: 100vw;
+        height: 100vh;
+        grid-template-columns: repeat(12, minmax(0,1fr));
+        grid-template-rows: repeat(12, auto);
+        grid-column-gap: .5%;
+        grid-row-gap: .5%;
+        grid-template-areas:
+      "hdgen    hdgen   hdgen       hdgen       hdgen       hdgen       hdgen       hdgen       hdgen       hdgen   hdgen   hdgen"
+      ".        navgen  navgen      navgen      navgen      navgen      navgen      navgen      navgen      navgen  navgen  ."
+      ".        .       main        main        main        main        main        main        main        main    .       ."
+      ".        .       main        main        main        main        main        main        main        main    .       ."
+      ".        .       .           main        main        main        main        main        main        .       .       ."
+      ".        .       .           main        main        main        main        main        main        .       .       ."
+      ".        .       .           main        main        main        main        main        main        .       .       ."
+      ".        .       .           main        main        main        main        main        main        .       .       ."
+      ".        .       .           main        main        main        main        main        main        .       .       ."
+      ".        .       .           main        main        main        main        main        main        .       .       ."
+      "ftgen    ftgen   ftgen       ftgen       ftgen       ftgen       ftgen       ftgen       ftgen       ftgen   ftgen   ftgen"
+      "ftgen    ftgen   ftgen       ftgen       ftgen       ftgen       ftgen       ftgen       ftgen       ftgen   ftgen   ftgen";
+
+    }
+
+    .grid-main--index{
+        grid-area: main;
+        display: grid;
+        grid-template-areas:
+
+    ".       secindx secindx secindx secindx ."
+    "secindx secindx secindx secindx secindx secindx"
+    "secindx secindx secindx secindx secindx secindx"
+    "secindx secindx secindx secindx secindx secindx"
+    "secindx secindx secindx secindx secindx secindx"
+    "secindx secindx secindx secindx secindx secindx"
+    "secindx secindx secindx secindx secindx secindx"
+    "secindx secindx secindx secindx secindx secindx";
+    }
 }

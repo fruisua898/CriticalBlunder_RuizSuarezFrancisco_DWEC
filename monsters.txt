@@ -1,12 +1,18 @@
     <link rel="stylesheet" href="css/overlays-style.css">
-    <section class="section-overlay-monsters--vademecum">
+        <link rel="stylesheet" href="css/grids/tablas-monstruos-grid.css">
+    <section onload="recoleccion_monstruos()"class="section-overlay-monsters--vademecum">
         <table>
         <thead>
-          <tr>
-            <td>Nombre</td>
-            <td>Tipo</td>
-            <td>Challenge Rating</td>
+          <tr class="parametros-bichos">
+            <td onclick="recoleccion_monstruos_nombre()" class="nombre-bicho">Nombre</td>
+            <td onclick="recoleccion_monstruos_type()" class="tipo-bicho">Tipo</td>
+            <td onclick="recoleccion_monstruos_cr()" class="cr-bicho">Challenge Rating</td>
           </tr>
         </thead>
+        <tbody id="escribir-monstruos">
+        </tbody>
         </table>
     </section>
+
+
+
