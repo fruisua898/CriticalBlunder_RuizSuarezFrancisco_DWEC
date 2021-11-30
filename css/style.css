@@ -30,6 +30,15 @@ body{
     no usar*/
 }
 
+select {
+    width: auto;
+    text-align-last:center;
+    background-color: var(--gris-oscuro-opa);
+    border-color: transparent transparent var(--gris-claro) transparent;
+    color: var(--gris-claro);
+    font-family: var(--texto);
+    padding: 0.5rem;
+}
 
 h1 {
     font-family: var(--titulos),Serif;
@@ -149,7 +158,9 @@ div > h2{
     background-image: url(../img/svg/cavern-blue.svg);
 
 }
-
+footer, header{
+    width: 100vw;
+}
 
 .form-bienvenida--register{
     margin-bottom: 2rem;
@@ -174,7 +185,6 @@ div > h2{
 
     resize:horizontal;
 }
-
 
 
 form > p > input ,.grid-form--register > div > button {
@@ -230,7 +240,7 @@ VADEMECUM
             background-image: url(../img/monsters.png);
             width: 75vw;
         }
-        .items-overlay--vademecum{
+            .items-overlay--vademecum{
             background-image: url(../img/items.png);
             width: 75vw;
 
@@ -248,52 +258,13 @@ VADEMECUM
 
 }
 
-select {
-    width: auto;
-    text-align-last:center;
-    background-color: var(--gris-oscuro-opa);
 
-    border-color: transparent transparent var(--gris-claro) transparent;
-    color: var(--gris-claro);
-    font-family: var(--texto);
-    padding: 0.5rem;
-}
-.items-explain--vademecum,.monster-explain--vademecum, .section-filter--vademecum>input, .section-filter--vademecum>button, .section-filter--vademecum>select{
+
+
+.items-explain--vademecum,.monster-explain--vademecum {
     font-size: 1rem;
     margin: 1rem 1rem 1rem 1rem;
     resize: both;
-}
-
-.section-filter--vademecum{
-    resize: horizontal;
-    max-width: 80vw;
-    min-font-size: 0.3rem;
-}
-#crit-busqueda-gen, #name-busqueda-gen{
-    width:auto;
-    height:auto;
-    padding:0.5rem;
-    color:var(--gris-claro);
-    background-color: var(--gris-oscuro-opa);
-    border-top:1px var(--gris-claro);
-    border-left: 1px;
-    border-right: 1px;
-    align-content: center;
-    text-align-last:center;
-    /*padding-left:48px;
-    background-image:url('https://img.icons8.com/ios-filled/50/000000/search--v4.png');
-    background-repeat:no-repeat;                    Para meter svg de lupa, pero no me convence
-    background-position:left;outline:0;*/
-}
-
-#crit-busqueda-gen:focus, #name-busqueda-gen:focus{
-    border-color: var(--gris-claro);
-}
-
-button.submit-busca{
-    width: 7.25rem;
-    height: 3.125rem;
-    border-radius: 0.938rem;
 }
 
 .monster-explain--vademecum, .items-explain--vademecum{
@@ -322,10 +293,14 @@ button.submit-busca{
 @media only screen and (max-width: 1318px) {
 
     div>h2.welcome-reg , div>h2.crea-account{
-        font-size: 1.5rem;
+        font-size: 1.2rem;
     }
     .grid-form--register{
         padding: 1rem;
+    }
+
+    footer{
+        font-size: 0.7rem;
     }
 }
 /*****VADEMECUM*******/

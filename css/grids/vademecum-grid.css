@@ -16,7 +16,7 @@ __________________________________________________
     justify-content: center;
     align-items: center;
     grid-template-areas:
-    ". filter  filter  filter  filter  filter    filter    filter   filter  filter  filter  filter"
+    ". secover  secover  secover  secover  secover    secover    secover   secover  secover  secover  secover"
     ". secover secover secover secover secover   secover   secover  secover secover secover secover"
     ". secover secover secover secover secover   secover   secover  secover secover secover secover"
     ". secover secover secover secover secover   secover   secover  secover secover secover secover"
@@ -26,16 +26,34 @@ __________________________________________________
     ". secover secover secover secover secover   secover   secover  secover secover secover secover";
     grid-gap: .5%;
 }
+
+.section-overlay--vademecum{
+    grid-area: secover;
+    display: grid;
+    grid-auto-flow: row;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    grid-template-areas:
+        "  .   .  filter       filter      filter      filter      filter      filter   filter  .   menusvg"
+        "  .   .  itemsvad     itemsvad    itemsvad    itemsvad    itemsvad    .        .       .   menusvg"
+        "  .   .  itemsvad     itemsvad    itemsvad    itemsvad    itemsvad    .        .       .   menusvg"
+        "  .   .  pitems       pitems      pitems      pitems      pitems      .        .       .   menusvg"
+        "  .   .  monstervad   monstervad  monstervad  monstervad  monstervad  .        .       .   menusvg"
+        "  .   .  monstervad   monstervad  monstervad  monstervad  monstervad  .        .       .   menusvg"
+        "  .   .  pmonsters    pmonsters   pmonsters   pmonsters   pmonsters   .        .       .   menusvg"
+        "  .   .  .            .           .           .           .           .        .       .   .";
+}
 .section-filter--vademecum{
     grid-area: filter;
-    display: inline-grid;
+
     grid-auto-flow: row;
     align-content: center;
 
     align-items: center;
     grid-template-areas:
 
-        "s-nombre    f-campaign     s-criterio  s-submit           go-monster    go-equip";
+        "s-nombre    f-campaign       s-submit           go-monster    go-equip";
 }
 
 .busca-nombre{
@@ -56,24 +74,6 @@ __________________________________________________
 .boton-equipamiento--vademecum{
     grid-area: go-equip;
 }
-
-.section-overlay--vademecum{
-    grid-area: secover;
-    display: inline-grid;
-    grid-auto-flow: row;
-    align-content: center;
-    justify-content: center;
-    align-items: center;
-    grid-template-areas:
-        "  .   .  itemsvad     itemsvad    itemsvad    itemsvad    itemsvad    .   .   .   menusvg"
-        "  .   .  itemsvad     itemsvad    itemsvad    itemsvad    itemsvad    .   .   .   menusvg"
-        "  .   .  pitems       pitems      pitems      pitems      pitems      .   .   .   menusvg"
-        "  .   .  monstervad   monstervad  monstervad  monstervad  monstervad  .   .   .   menusvg"
-        "  .   .  monstervad   monstervad  monstervad  monstervad  monstervad  .   .   .   menusvg"
-        "  .   .  pmonsters    pmonsters   pmonsters   pmonsters   pmonsters   .   .   .   menusvg"
-        "  .   .  .            .           .           .           .           .   .   .   .";
-}
-
 
 .items-overlay--vademecum{
     grid-area: itemsvad;

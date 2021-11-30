@@ -24,11 +24,52 @@ thead {
 
 }
 
-/*Ajustes para la tabla*/
-.tabla-monstruos{
-    justify-content: center;
+/*Filtro*/
+@media only screen and (max-width: 1202px) {
+    .section-filter--vademecum {
+        font-size: 0.7rem;
+
+    }
+}
+a.submit-busca{
+    align-content: center;
+}
+
+
+.section-filter--vademecum{
+    align-items: center;
     display: block;
-    height: 50vh;
+    width: 50vw;
+    margin-bottom: 2rem;
+}
+
+.busca-nombre, .filtro-campaign, .submit-busca{
+
+    border-radius: 10px;
+    padding: 0.5rem;
+    margin-left: 1rem;
+}
+.busca-nombre, .filtro-campaign{
+    border-bottom-style: solid;
+    border-bottom-color: var(--gris-claro);
+    border-top-style: solid;
+    border-top-color: var(--gris-claro);
+}
+.submit-busca{
+    border-style: solid;
+    background-color: var(--gris-claro);
+    color: var(--gris-oscuro);
+
+}
+
+
+/*Ajustes para la tabla*/
+
+.tabla-monstruos{
+
+    display: block;
+    width: 70vw;
+    height: 60vh;
     overflow-x: scroll;
     -ms-overflow-style: none; /* IE y Edge*/
     scrollbar-width: none; /* Para Firefox*/
@@ -38,14 +79,12 @@ thead {
     display: none; /* Para chrome */
 }
 
-
-/*
-tbody > tr:first-child > td::first-letter{
+tbody > tr:first-child::first-letter{
     font-family: var(--titulos);
     font-size: 1.3rem;
     color: var(--verde-claro);
 }
-*/
+
 
 
 table > thead > tr > td {

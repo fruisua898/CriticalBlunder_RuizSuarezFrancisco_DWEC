@@ -1,17 +1,33 @@
-    <link rel="stylesheet" href="css/overlays-style.css">
-    <link rel="stylesheet" href="css/grids/tablas-monstruos-grid.css">
+<link rel="stylesheet" href="css/overlays-style.css">
+<link rel="stylesheet" href="css/grids/tablas-monstruos-grid.css">
 
+<section class="section-overlay-monsters--vademecum">
+    <form class="section-filter--vademecum">
 
-    <section onload="recoleccion_monstruos()" class="section-overlay-monsters--vademecum">
-        <table class="tabla-monstruos">
+        <label for="monster-campaign-name"></label>
+        <input id="monster-campaign-name" type="search" class="busca-nombre">
+
+        <label for="monster-campaign-values"></label>
+        <select  id="monster-campaign-values" class="filtro-campaign">
+
+            <option value="wotc-srd" selected>-Filtrar por campaña-</option>
+            <option value="wotc-srd">Systems Reference Document</option>
+            <option value="tob">Tome of Beasts OGL</option>
+            <option value="cc">Creature Codex OGL</option>
+
+        </select>
+        <a onclick="busqueda_monstruo()" class="submit-busca">Buscar</a>
+
+    </form>
+    <table class="tabla-monstruos">
         <thead>
-          <tr class="parametros-bichos">
+        <tr class="parametros-bichos">
             <td onclick="recoleccion_monstruos_nombre()" class="nombre-bicho">Nombre</td>
             <td onclick="recoleccion_monstruos_type()" class="tipo-bicho">Tipo</td>
             <td onclick="recoleccion_monstruos_cr()" class="cr-bicho">Challenge Rating</td>
-          </tr>
+        </tr>
         </thead>
         <tbody id="escribir-monstruos">
         </tbody>
-        </table>
-    </section>
+    </table>
+</section>
