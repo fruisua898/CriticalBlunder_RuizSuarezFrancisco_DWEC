@@ -1,7 +1,9 @@
     <link rel="stylesheet" href="css/overlays-style.css">
-        <link rel="stylesheet" href="css/grids/tablas-monstruos-grid.css">
-    <section onload="recoleccion_monstruos()"class="section-overlay-monsters--vademecum">
-        <table>
+    <link rel="stylesheet" href="css/grids/tablas-monstruos-grid.css">
+
+
+    <section onload="recoleccion_monstruos()" class="section-overlay-monsters--vademecum">
+        <table class="tabla-monstruos">
         <thead>
           <tr class="parametros-bichos">
             <td onclick="recoleccion_monstruos_nombre()" class="nombre-bicho">Nombre</td>
@@ -13,6 +15,3 @@
         </tbody>
         </table>
     </section>
-
-
-

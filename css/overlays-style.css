@@ -1,17 +1,55 @@
+@import url(root.css);
+
 .items-magico--vademecum   , .items-mundano--vademecum {
     width: 30vw;
     margin-left: 1rem;
     margin-right: 1rem;
 }
 td{
+    font-size: 1.2rem;
     width: 10vw;
-    padding: 1rem;
+    margin-top: 1rem;
+    border-bottom-style: solid;
+    border-bottom-width: 2px;
 }
 thead > td {
     font-weight: bold;
 }
 
-#escribir-monstruos {
+thead {
+    background: var(--gris-claro);
+    position: sticky;
+    box-shadow: 0 2px 2px 1px var(--gris-claro);
+    top: 0; /* Importante */
 
-    overflow-x: auto;
+}
+
+/*Ajustes para la tabla*/
+.tabla-monstruos{
+    justify-content: center;
+    display: block;
+    height: 50vh;
+    overflow-x: scroll;
+    -ms-overflow-style: none; /* IE y Edge*/
+    scrollbar-width: none; /* Para Firefox*/
+}
+
+.tabla-monstruos::-webkit-scrollbar{
+    display: none; /* Para chrome */
+}
+
+
+/*
+tbody > tr:first-child > td::first-letter{
+    font-family: var(--titulos);
+    font-size: 1.3rem;
+    color: var(--verde-claro);
+}
+*/
+
+
+table > thead > tr > td {
+    color: var(--gris-oscuro);
+    border-style: solid;
+    border-width: 5px;
 }

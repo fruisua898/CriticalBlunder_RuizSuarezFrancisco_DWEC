@@ -11,7 +11,6 @@ __________________________________________________
     width: 100vw;
     grid-area: main;
     display: grid;
-
     align-content: center;
     justify-content: center;
     align-items: center;
@@ -24,7 +23,7 @@ __________________________________________________
     ". secover secover secover secover secover   secover   secover  secover secover secover secover"
     ". secover secover secover secover secover   secover   secover  secover secover secover secover"
     ". secover secover secover secover secover   secover   secover  secover secover secover secover";
-    grid-gap: .5%;
+
 }
 .section-filter--vademecum{
     grid-area: filter;
@@ -59,14 +58,14 @@ __________________________________________________
 
 .section-overlay--vademecum{
     grid-area: secover;
-    display: inline-grid;
+    display: inline-block;
     grid-auto-flow: row;
     align-content: center;
     justify-content: center;
     align-items: center;
     grid-template-areas:
-       "tablas  tablas  tablas"
-       "tablas   tablas  tablas";
+       "tablas  tablas  tablas tablas  tablas  tablas tablas  tablas  tablas "
+       "tablas   tablas  tablas tablas  tablas  tablas tablas  tablas  tablas";
 }
 
 

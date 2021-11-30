@@ -39,8 +39,7 @@ function mostrar_monstruos(data){
         var td = document.createElement("td");
         td.innerHTML = data.results[i].challenge_rating;
         tabla.appendChild(td);
-        var hr = document.createElement("hr");
-        tabla.appendChild(hr);
+
     }
 
 
@@ -49,19 +48,19 @@ function mostrar_monstruos(data){
 
 function recoleccion_monstruos_nombre() {
     monstruos()
-    fetch('https://api.open5e.com/monsters/?limit=25&ordering=name')
+    fetch('https://api.open5e.com/monsters/?limit=555&ordering=name')
         .then(monstruos => monstruos.json())
         .then(data => mostrar_monstruos(data));
 }
 function recoleccion_monstruos_type() {
     monstruos()
-    fetch('https://api.open5e.com/monsters/?limit=25&ordering=type')
+    fetch('https://api.open5e.com/monsters/?limit=555&ordering=type')
         .then(monstruos => monstruos.json())
         .then(data => mostrar_monstruos(data));
 }
 function recoleccion_monstruos_cr() {
     monstruos()
-    fetch('https://api.open5e.com/monsters/?limit=25&ordering=challenge_rating')
+    fetch('https://api.open5e.com/monsters/?limit=555&ordering=challenge_rating')
         .then(monstruos => monstruos.json())
         .then(data => mostrar_monstruos(data));
 }
