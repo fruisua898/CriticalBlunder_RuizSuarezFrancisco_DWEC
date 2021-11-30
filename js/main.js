@@ -27,10 +27,12 @@ function monstruos() {
 function mostrar_monstruos(data){
     let tabla = document.getElementById("escribir-monstruos");
     const rowtabla = tabla.childElementCount;
+    let contador = 0;
     if (rowtabla>2){
         monstruos()
     }
     for (let i = 0; i < data.results.length; i++) {
+        contador+=1;
         var tr = document.createElement("tr");
         tabla.appendChild(tr);
         var td = document.createElement("td");
@@ -39,12 +41,16 @@ function mostrar_monstruos(data){
         td.id = data.results[i].name;
         var td = document.createElement("td");
         td.innerHTML = data.results[i].type;
-        td.classList.add(data.results[i].type);
         tabla.appendChild(td);
         var td = document.createElement("td");
         td.innerHTML = data.results[i].challenge_rating;
         tabla.appendChild(td);
     }
+    var tr = document.createElement("tr");
+    tabla.appendChild(tr);
+    var legend = document.createElement("legend");
+    legend.innerHTML = contador+" coincidencias encontradas";
+    tabla.appendChild(legend);
 }
 
 /*Busquedas*/
@@ -55,7 +61,7 @@ function busqueda_monstruo() {
     let src = document.getElementById("monster-campaign-values").value;
     let name = document.getElementById("monster-campaign-name").value;
     monstruos();
-    fetch('https://api.open5e.com/monsters/?search='+name+'&document__slug='+src)
+    fetch('https://api.open5e.com/monsters/?limit=1086&search='+name+'&document__slug='+src)
         .then(monstruos => monstruos.json())
         .then(data => mostrar_monstruos(data));
     monstruos(); //Si no recibimos nada muestra el sitio donde estamos.
@@ -67,13 +73,13 @@ function busqueda_monstruo() {
 
 function recoleccion_monstruos_nombre() {
     monstruos();
-    fetch('https://api.open5e.com/monsters/?limit=555&ordering=name')
+    fetch('https://api.open5e.com/monsters/?limit=1086&ordering=name')
         .then(monstruos => monstruos.json())
         .then(data => mostrar_monstruos(data));
 }
 function recoleccion_monstruos_type() {
     monstruos();
-    fetch('https://api.open5e.com/monsters/?limit=555&ordering=type')
+    fetch('https://api.open5e.com/monsters/?limit=1086&ordering=type')
         .then(monstruos => monstruos.json())
         .then(data => mostrar_monstruos(data));
 }

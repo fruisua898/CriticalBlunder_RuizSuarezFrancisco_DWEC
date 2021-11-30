@@ -140,7 +140,7 @@ __________________________________________________
         display: none;
     }
 
-    .grid-padre--index {
+    .grid-padre{
 
         display: grid;
         width: 100vw;
@@ -165,18 +165,5 @@ __________________________________________________
 
     }
 
-    .grid-main--index{
-        grid-area: main;
-        display: grid;
-        grid-template-areas:
 
-    ".       secindx secindx secindx secindx ."
-    "secindx secindx secindx secindx secindx secindx"
-    "secindx secindx secindx secindx secindx secindx"
-    "secindx secindx secindx secindx secindx secindx"
-    "secindx secindx secindx secindx secindx secindx"
-    "secindx secindx secindx secindx secindx secindx"
-    "secindx secindx secindx secindx secindx secindx"
-    "secindx secindx secindx secindx secindx secindx";
-    }
 }

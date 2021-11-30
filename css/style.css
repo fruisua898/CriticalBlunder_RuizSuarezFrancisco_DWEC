@@ -108,6 +108,7 @@ ul {
     list-style-type: none;
 }
 .grid-nav{
+    width: 90vw;
     font-size: 1rem;
     margin-top: 2.5%;
     margin-bottom: 2.5%;

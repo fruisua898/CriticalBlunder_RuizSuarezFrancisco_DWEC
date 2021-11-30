@@ -39,8 +39,14 @@ a.submit-busca{
 .section-filter--vademecum{
     align-items: center;
     display: block;
-    width: 50vw;
+    width: 90vw;
     margin-bottom: 2rem;
+}
+tbody >  legend{
+
+    width: 20vw;
+    color: var(--verde-claro);
+    font-style: var(--titulos);
 }
 
 .busca-nombre, .filtro-campaign, .submit-busca{
