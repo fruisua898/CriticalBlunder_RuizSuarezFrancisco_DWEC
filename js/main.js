@@ -147,6 +147,7 @@ function mostrar_detalle(monster) {
 
         var td = document.createElement("td");
         td.innerHTML = monster.results[i].name;
+        td.colSpan= 6;
         tr.appendChild(td);
 
         var tr = document.createElement("tr");

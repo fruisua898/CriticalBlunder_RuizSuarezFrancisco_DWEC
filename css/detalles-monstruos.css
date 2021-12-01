@@ -9,16 +9,16 @@ main > section > table > tr > td > em {
 
 .avatar-detalle-monstruo{
     display: block;
-    width: 12vw;
+    max-width: 6.5vw;
+    height: auto;
 }
 .avatar-detalle-monstruo:hover{
-    transform: scale(2) translate(-20%, 50%);
+    transform: scale(2);
 }
 
 .stats-base-bonos > td {
-    margin: 0;
-    padding: 0;
-    width: 5vw;
+
+    width: 144px;
 }
 .tipos > td{
     width: 15vw;
@@ -37,16 +37,17 @@ tr.stats > td{
 td > a{
     font-weight: bold;
 }
-
+td {
+    padding: 0.4rem;
+}
 
 .tabla-detalles{
-
+    border-color: var(--azul-oscuro);
     border-collapse: collapse;
     display: block;
     margin-left: auto;
     margin-right: auto;
-
-    height: 60vh;
+    height: 70vh;
     overflow-x: scroll;
     -ms-overflow-style: none; /* IE y Edge*/
     scrollbar-width: none; /* Para Firefox*/
