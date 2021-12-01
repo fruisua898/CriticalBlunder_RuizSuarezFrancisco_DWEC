@@ -2,7 +2,7 @@
 <link rel="stylesheet" href="css/grids/tablas-monstruos-grid.css">
 
 <section class="section-overlay-monsters--vademecum">
-    <form class="section-filter--vademecum">
+    <form onsubmit="busqueda_monstruo()" id="filtro-vad-monster" class="section-filter--vademecum">
 
         <label for="monster-campaign-name"></label>
         <input id="monster-campaign-name" type="search" class="busca-nombre">
@@ -16,7 +16,7 @@
             <option value="cc">Creature Codex OGL</option>
 
         </select>
-        <a onclick="busqueda_monstruo()" class="submit-busca">Buscar</a>
+        <input onclick="prevent_refresh()" type="submit" value="busca"  class="submit-busca"></input>
 
     </form>
     <table class="tabla-monstruos">
@@ -31,3 +31,14 @@
         </tbody>
     </table>
 </section>
+<aside>
+<table>
+<tr>
+<td>Ro</td>
+<td>dri</td>
+<td>go</td>
+</tr>
+
+</table>
+
+</aside>

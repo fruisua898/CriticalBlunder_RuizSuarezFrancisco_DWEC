@@ -57,7 +57,17 @@ function mostrar_monstruos(data){
 
 /* --- FILTRO DE BUSQUEDA - MONSTRUOS  --- */
 
+
+// Evito el refresh del formulario, al hacer submit su comportamiento por defecto es hacer un refresh.
+
+function prevent_refresh(){
+    document.getElementById("filtro-vad-monster").addEventListener("submit", function(event){
+        event.preventDefault()})
+}
+
+
 function busqueda_monstruo() {
+
     let src = document.getElementById("monster-campaign-values").value;
     let name = document.getElementById("monster-campaign-name").value;
     monstruos();
@@ -69,8 +79,11 @@ function busqueda_monstruo() {
 
 
 
-
-
+/* Ordenar según criterio
+*   Nombre
+*   Tipo
+*   CR
+* */
 function recoleccion_monstruos_nombre() {
     monstruos();
     fetch('https://api.open5e.com/monsters/?limit=1086&ordering=name')
