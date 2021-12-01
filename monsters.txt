@@ -31,14 +31,3 @@
         </tbody>
     </table>
 </section>
-<aside>
-<table>
-<tr>
-<td>Ro</td>
-<td>dri</td>
-<td>go</td>
-</tr>
-
-</table>
-
-</aside>

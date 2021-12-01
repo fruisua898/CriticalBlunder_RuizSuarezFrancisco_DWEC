@@ -12,11 +12,19 @@ td{
     border-bottom-style: solid;
     border-bottom-width: 2px;
 }
-thead > td {
+td:first-child{
     font-weight: bold;
 }
 
+tbody > tr > td:first-child::first-letter{
+    font-family: var(--titulos);
+    color: var(--verde-claro);
+}
+
+
+
 thead {
+
     background: var(--gris-claro);
     position: sticky;
     box-shadow: 0 2px 2px 1px var(--gris-claro);
@@ -89,10 +97,13 @@ tbody > tr:first-child::first-letter{
     color: var(--verde-claro);
 }
 
-
+table {
+    border-collapse: collapse;
+}
 
 table > thead > tr > td {
     color: var(--gris-oscuro);
     border-style: solid;
-    border-width: 5px;
+    border-width: 2px;
+
 }
