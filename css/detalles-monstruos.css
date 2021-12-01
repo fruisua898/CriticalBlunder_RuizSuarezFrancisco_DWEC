@@ -1,0 +1,57 @@
+/* Detalles monstruos */
+
+main > section > table > .nombre > td {
+    color:var(--verde-claro);
+}
+main > section > table > tr > td > em {
+    font-weight: bold;
+}
+
+.avatar-detalle-monstruo{
+    display: block;
+    width: 12vw;
+}
+.avatar-detalle-monstruo:hover{
+    transform: scale(2) translate(-20%, 50%);
+}
+
+.stats-base-bonos > td {
+    margin: 0;
+    padding: 0;
+    width: 5vw;
+}
+.tipos > td{
+    width: 15vw;
+}
+
+.rayote{
+    border-bottom-style: solid;
+    border-bottom-width: 2px;
+}
+
+tr.stats > td{
+    border-top-style: solid;
+    border-top-width: 2px;
+
+}
+td > a{
+    font-weight: bold;
+}
+
+
+.tabla-detalles{
+
+    border-collapse: collapse;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+    height: 60vh;
+    overflow-x: scroll;
+    -ms-overflow-style: none; /* IE y Edge*/
+    scrollbar-width: none; /* Para Firefox*/
+}
+
+table::-webkit-scrollbar{
+    display: none; /* Para chrome */
+}

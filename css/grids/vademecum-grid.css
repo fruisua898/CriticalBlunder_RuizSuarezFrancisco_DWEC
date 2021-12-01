@@ -35,7 +35,7 @@ __________________________________________________
     justify-content: center;
     align-items: center;
     grid-template-areas:
-        "  .   .  filter       filter      filter      filter      filter      filter   filter  .   menusvg"
+
         "  .   .  itemsvad     itemsvad    itemsvad    itemsvad    itemsvad    .        .       .   menusvg"
         "  .   .  itemsvad     itemsvad    itemsvad    itemsvad    itemsvad    .        .       .   menusvg"
         "  .   .  pitems       pitems      pitems      pitems      pitems      .        .       .   menusvg"
@@ -43,17 +43,6 @@ __________________________________________________
         "  .   .  monstervad   monstervad  monstervad  monstervad  monstervad  .        .       .   menusvg"
         "  .   .  pmonsters    pmonsters   pmonsters   pmonsters   pmonsters   .        .       .   menusvg"
         "  .   .  .            .           .           .           .           .        .       .   .";
-}
-.section-filter--vademecum{
-    grid-area: filter;
-
-    grid-auto-flow: row;
-    align-content: center;
-
-    align-items: center;
-    grid-template-areas:
-
-        "s-nombre    f-campaign       s-submit           go-monster    go-equip";
 }
 
 .busca-nombre{
@@ -110,6 +99,7 @@ __________________________________________________
     justify-content: center;
     align-items: center;
     grid-template-areas:
+        ".  mundvad   mundvad  mundvad    mundvad    .    magicvad    magicvad    magicvad   magicvad   .";
         ".  mundvad   mundvad  mundvad    mundvad    .    magicvad    magicvad    magicvad   magicvad   ."
         ".  mundvad   mundvad  mundvad    mundvad    .    magicvad    magicvad    magicvad   magicvad   ."
         ".  mundvad   mundvad  mundvad    mundvad    .    magicvad    magicvad    magicvad   magicvad   ."
@@ -127,6 +117,47 @@ __________________________________________________
 .items-magico--vademecum{
     grid-area: magicvad;
 }
+
+/* Tabla y ficha */
+/*
+.section-overlay-monsters--vademecum{
+    grid-area: secover;
+    display: inline-grid;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    grid-template-areas:
+        ".  filter   filter  filter    filter    filter filter       filter       filter      filter   ."
+        ".  montab   montab  montab    montab    montab      montab    montab    montab   montab   montab "
+        ".  montab   montab  montab    montab    montab      montab    montab    montab   montab   montab "
+        ".  montab   montab  montab    montab    montab      montab    montab    montab   montab   montab "
+        ".  detmontab   detmontab  detmontab    detmontab    detmontab      detmontab    detmontab    detmontab   detmontab   detmontab "
+        ".  detmontab   detmontab  detmontab    detmontab    detmontab      detmontab    detmontab    detmontab   detmontab   detmontab "
+        ".  detmontab   detmontab  detmontab    detmontab    detmontab      detmontab    detmontab    detmontab   detmontab   detmontab "
+        ".  detmontab   detmontab  detmontab    detmontab    detmontab      detmontab    detmontab    detmontab   detmontab   detmontab ";
+}
+
+.section-filter--vademecum{
+    grid-area: filter;
+
+    grid-auto-flow: row;
+    align-content: center;
+
+    align-items: center;
+    grid-template-areas:
+
+        "s-nombre    f-campaign       s-submit           go-monster    go-equip";
+}
+
+.tabla-monstruos{
+    grid-area: montab;
+
+}
+.detalle-monstruo-print {
+    grid-area: detmontab;
+}*/
+
+
 
 /*--------------------------------------------------------------------------*/
 /* MOBILE */
@@ -154,7 +185,7 @@ __________________________________________________
       ".        navgen  navgen      navgen      navgen      navgen      navgen      navgen      navgen      navgen  navgen  ."
       ".        .       main        main        main        main        main        main        main        main    .       ."
       ".        .       main        main        main        main        main        main        main        main    .       ."
-      ".        .       .           main        main        main        main        main        main        .       .       ."
+      ".        .       main        main        main        main        main        main        main        .       .       ."
       ".        .       .           main        main        main        main        main        main        .       .       ."
       ".        .       .           main        main        main        main        main        main        .       .       ."
       ".        .       .           main        main        main        main        main        main        .       .       ."
@@ -165,5 +196,22 @@ __________________________________________________
 
     }
 
+    .grid-main--vademecum{
+        width: 100vw;
+        grid-area: main;
+        display: grid;
 
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+        grid-template-areas:
+        "main        main        main        main        main        main        main        main    .       ."
+        "main        main        main        main        main        main        main        main    .       ."
+        "main        main        main        main        main        main        .       .       ."
+        "main        main        main        main        main        main        .       .       ."
+        ".        .       .           main        main        main        main        main        main        .       .       ."
+        ".        .       .           main        main        main        main        main        main        .       .       ."
+        ".        .       .           main        main        main        main        main        main        .       .       ."
+        ".        .       .           main        main        main        main        main        main        .       .       ."
+        }
 }

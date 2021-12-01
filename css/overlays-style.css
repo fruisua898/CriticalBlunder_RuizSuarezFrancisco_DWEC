@@ -1,6 +1,7 @@
 @import url(root.css);
 
 .items-magico--vademecum   , .items-mundano--vademecum {
+
     width: 30vw;
     margin-left: 1rem;
     margin-right: 1rem;
@@ -19,8 +20,9 @@ td:first-child{
 tbody > tr > td:first-child::first-letter{
     font-family: var(--titulos);
     color: var(--verde-claro);
-}
+    padding-bottom: 1rem;
 
+}
 
 
 thead {
@@ -38,9 +40,20 @@ thead {
         font-size: 0.7rem;
 
     }
+
+}
+.detalle-monstruo-print{
+    width: 35vw;
+    display: block;
+
 }
 
 
+aside > table >  tr > td{
+    border: 0;
+    margin: 0;
+
+}
 
 .section-filter--vademecum{
     align-items: center;
@@ -74,13 +87,13 @@ tbody >  legend{
 
 }
 
-
 /*Ajustes para la tabla*/
 
 .tabla-monstruos{
 
     display: block;
-    width: 70vw;
+    text-align: center;
+    width: 60vw;
     height: 60vh;
     overflow-x: scroll;
     -ms-overflow-style: none; /* IE y Edge*/
@@ -105,5 +118,5 @@ table > thead > tr > td {
     color: var(--gris-oscuro);
     border-style: solid;
     border-width: 2px;
-
 }
+

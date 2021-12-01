@@ -258,20 +258,33 @@ VADEMECUM
     height: 25vh;
 
 }
+.items-explain--vademecum{
+    text-shadow: 2px 2px var(--gris-oscuro);
+    font-weight: bold;
+    color: var(--gris-claro);
+    font-size: 2rem;
+    position: absolute;
+    background-color: var(--gris-oscuro-opa);
+    bottom: 35%;
+    right: 25%;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.monster-explain--vademecum{
 
-
-
-
-.items-explain--vademecum,.monster-explain--vademecum {
-    font-size: 1rem;
-    margin: 1rem 1rem 1rem 1rem;
-    resize: both;
+    font-weight: bold;
+    color: white;
+    font-size: 2rem;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 .monster-explain--vademecum, .items-explain--vademecum{
-    width: 40vw;
-    justify-self: center;
-    font-size: 0.5rem;
+width: 50vw;
+
 }
 
 /************MEDIAS*************/
@@ -303,6 +316,7 @@ VADEMECUM
     footer{
         font-size: 0.7rem;
     }
+
 }
 /*****VADEMECUM*******/
 /********REGISTER********/

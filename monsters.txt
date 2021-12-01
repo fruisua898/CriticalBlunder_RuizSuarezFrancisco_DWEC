@@ -16,18 +16,24 @@
             <option value="cc">Creature Codex OGL</option>
 
         </select>
-        <input onclick="prevent_refresh()" type="submit" value="busca"  class="submit-busca"></input>
+        <input onclick="prevent_refresh()" type="submit" value="Buscar"  class="submit-busca"></input>
 
     </form>
+
     <table class="tabla-monstruos">
         <thead>
         <tr class="parametros-bichos">
             <td onclick="recoleccion_monstruos_nombre()" class="nombre-bicho">Nombre</td>
             <td onclick="recoleccion_monstruos_type()" class="tipo-bicho">Tipo</td>
-            <td onclick="recoleccion_monstruos_cr()" class="cr-bicho">Challenge Rating</td>
+            <td onclick="recoleccion_monstruos_cr()" class="cr-bicho">CR</td>
         </tr>
         </thead>
         <tbody id="escribir-monstruos">
         </tbody>
     </table>
+</section>
+
+<section id="detalle-monstruo-print">
+
+
 </section>
