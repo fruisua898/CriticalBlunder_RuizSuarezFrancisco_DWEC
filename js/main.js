@@ -37,14 +37,14 @@ function mostrar_monstruos(data){
         tabla.appendChild(tr);
         var td = document.createElement("td");
         td.innerHTML = data.results[i].name;
-        tabla.appendChild(td);
+        tr.appendChild(td);
         td.id = data.results[i].name;
         var td = document.createElement("td");
         td.innerHTML = data.results[i].type;
-        tabla.appendChild(td);
+        tr.appendChild(td);
         var td = document.createElement("td");
         td.innerHTML = data.results[i].challenge_rating;
-        tabla.appendChild(td);
+        tr.appendChild(td);
     }
     var tr = document.createElement("tr");
     tabla.appendChild(tr);
