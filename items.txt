@@ -1,5 +1,5 @@
-    <link rel="stylesheet" href="css/overlays-style.css">
+<link rel="stylesheet" href="css/overlays-style.css">
     <section class="section-overlay-items--vademecum">
-        <button class="items-mundano--vademecum"><img src="img/svg/equipo-mudano.svg"/></button>
-        <button class="items-magico--vademecum"><img src="img/svg/equipo-magico.svg"/></button>
+        <button type="button" onclick="items_mundanos_listado()" class="items-mundano--vademecum"><img src="img/svg/equipo-mudano.svg"/></button>
+        <button type="button" onclick="items_magicos_listado()" class="items-magico--vademecum"><img src="img/svg/equipo-magico.svg"/></button>
     </section>

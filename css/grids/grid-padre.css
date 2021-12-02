@@ -4,9 +4,8 @@
     display: grid;
     width: 100vw;
     height: 100vh;
-    grid-template-columns: repeat(12, minmax(100px,1fr));
+    grid-template-columns: repeat(12, minmax(0,1fr));
     grid-template-rows: repeat(12,auto);
-
     grid-template-areas:
       "hdgen        hdgen       hdgen   hdgen   hdgen   hdgen   hdgen   hdgen   hdgen   hdgen   hdgen   hdgen"
       ".            navgen      navgen  navgen  navgen  navgen  navgen  navgen  navgen  navgen  navgen  ."

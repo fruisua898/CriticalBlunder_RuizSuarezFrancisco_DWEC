@@ -137,6 +137,12 @@ function mostrar_detalle(monster) {
     let lateral = document.getElementById("detalle-monstruo-print");
     for (let i = 0; i < monster.results.length; i++) {
 
+        var img = document.createElement("img");
+        img.className="avatar-detalle-monstruo";
+        img.src = 'https://5e.tools/img/MM/'+monster.results[i].name+'.png';
+        lateral.appendChild(img)
+
+
         var tabla = document.createElement("table");
         tabla.className="tabla-detalles";
         lateral.appendChild(tabla);
@@ -164,15 +170,19 @@ function mostrar_detalle(monster) {
         td.className="rayote";
         tr.appendChild(td);
 
-        var td = document.createElement("td");
+
+
+
+        /*var td = document.createElement("td");
         td.rowSpan=2;
         tr.appendChild(td);
         var img = document.createElement("img");
         img.className="avatar-detalle-monstruo";
         img.src = 'https://5e.tools/img/MM/'+monster.results[i].name+'.png'; /* Chapuza, pero la API no me proporciona imagenes */
-        td.colSpan=2;
+       /* td.colSpan=2;
         td.rowSpan=4;
         td.appendChild(img);
+        */
 
         /*SUB ATRIBUTOS
             * CA
@@ -304,9 +314,74 @@ function mostrar_detalle(monster) {
         td.className="rayote";
         tr.appendChild(td);
 
+        var tr = document.createElement("tr");
+        tr.className="salvaciones";
+        tabla.appendChild(tr);
 
+        let str_throw = monster.results[i].strength_save;
+        let dex_throw = monster.results[i].dexterity_save;
+        let con_throw = monster.results[i].constitution_save;
+        let int_throw = monster.results[i].intelligence_save;
+        let wis_throw = monster.results[i].wisdom_save;
+        let cha_throw = monster.results[i].charisma_save;
 
+        /* Comprobamos que exista algún parametro para hacer las comprobaciones y meter lo correspondiente*/
+        if (str_throw || dex_throw || con_throw || int_throw || wis_throw || cha_throw){
 
+            var td = document.createElement("td");
+            td.innerHTML ="<a>Saving Throws </a>";
+            td.className="rayote";
+            tr.appendChild(td);
+            tr.appendChild(td);
+
+        if (str_throw){
+            var td = document.createElement("td");
+            td.innerHTML ="Str "+(str_throw);
+            td.className="rayote";
+            //td.colSpan=2;
+            tr.appendChild(td);
+        }
+
+        if (dex_throw){
+            var td = document.createElement("td");
+            td.innerHTML ="Dex "+(dex_throw);
+            td.className="rayote";
+            //td.colSpan=2;
+            tr.appendChild(td);
+        }
+        if (con_throw){
+            var td = document.createElement("td");
+            td.innerHTML ="Con "+(con_throw);
+            td.className="rayote";
+            //td.colSpan=2;
+            tr.appendChild(td);
+        }
+        if (int_throw){
+            var td = document.createElement("td");
+            td.innerHTML ="Int "+(int_throw);
+            td.className="rayote";
+            //td.colSpan=2;
+            tr.appendChild(td);
+        }
+
+        if (wis_throw){
+            var td = document.createElement("td");
+            td.innerHTML ="Wis "+(wis_throw);
+            td.className="rayote";
+            //td.colSpan=2;
+            tr.appendChild(td);
+        }
+
+        if (cha_throw){
+            var td = document.createElement("td");
+            td.innerHTML ="Cha "+(cha_throw);
+            td.className="rayote";
+            //td.colSpan=2;
+            tr.appendChild(td);
+        }
+        }
+        /*STR       |       DEX*/
+        /*Athletics | Acrobatics, Stealth, */
     }
 }
 

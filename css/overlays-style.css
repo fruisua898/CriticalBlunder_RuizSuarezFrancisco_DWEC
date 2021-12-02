@@ -17,6 +17,9 @@ td:first-child{
     font-weight: bold;
 }
 
+.section-overlay-items-mundanos--vademecum > h1{
+    color: var(--gris-claro);
+}
 tbody > tr > td:first-child::first-letter{
     font-family: var(--titulos);
     color: var(--verde-claro);

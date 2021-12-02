@@ -23,7 +23,7 @@ body{
     background-color: var(--gris-oscuro);
     font-family: var(--texto);
     color: var(--gris-claro);
-    /*overflow-x: hidden; Trabajo de investigación exhaustivo, sigo sin estar seguro de si esta práctica es buena o mala, simplemente el navegador fastidia bastante
+        /*overflow-x: hidden; Trabajo de investigación exhaustivo, sigo sin estar seguro de si esta práctica es buena o mala, simplemente el navegador fastidia bastante
     con un 100vw de viewport que en resumen es 100% de la pantalla. No obstante el navegador tiene en cuenta la scrollball, lo que provoca un overflow. Con esta
     propiedad se evita el overflow,
 

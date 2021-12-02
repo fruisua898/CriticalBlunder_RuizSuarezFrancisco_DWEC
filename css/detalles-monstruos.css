@@ -8,12 +8,20 @@ main > section > table > tr > td > em {
 }
 
 .avatar-detalle-monstruo{
+    left: 300px;
+    top: -30px;
+    position: absolute;
     display: block;
-    max-width: 6.5vw;
+    max-width: 13vw;
     height: auto;
 }
+
+.section-overlay-monsters--vademecum{
+    position: relative;
+}
+
 .avatar-detalle-monstruo:hover{
-    transform: scale(2);
+    transform: scale(3);
 }
 
 .stats-base-bonos > td {

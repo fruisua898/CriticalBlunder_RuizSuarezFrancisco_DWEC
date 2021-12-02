@@ -1,0 +1,16 @@
+<link rel="stylesheet" href="css/overlays-style.css">
+<section class="section-overlay-items-mundanos--vademecum">
+        <h1>EQUIPO</h1>
+        <hr>
+        <table>
+        <thead>
+          <tr>
+            <td>Nombre</td>
+            <td>Precio</td>
+            <td>Peso</td>
+            <td>Atributos</td>
+            <td>Notas</td>
+          </tr>
+        </thead>
+        </table>
+    </section>

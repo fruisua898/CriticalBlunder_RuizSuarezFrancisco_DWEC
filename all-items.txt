@@ -1,0 +1,13 @@
+
+<table id="all-magic-items">
+  <thead>
+  <tr>
+    <td>Nombre</td>
+    <td>Precio</td>
+    <td>Peso</td>
+    <td>Atributos</td>
+    <td>Notas</td>
+  </tr>
+  </thead>
+</table>
+
