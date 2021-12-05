@@ -1,5 +1,6 @@
 <link rel="stylesheet" href="css/overlays-style.css">
 <link rel="stylesheet" href="css/grids/tablas-monstruos-grid.css">
+<link rel="stylesheet" href="css/detalles-monstruos.css">
 
 <section class="section-overlay-monsters--vademecum">
     <form onsubmit="busqueda_monstruo()" id="filtro-vad-monster" class="section-filter--vademecum">
@@ -33,7 +34,4 @@
     </table>
 </section>
 
-<section id="detalle-monstruo-print">
 
-
-</section>

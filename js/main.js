@@ -21,6 +21,8 @@ function monstruos() {
     xhttp.send();
 }
 
+/* ABRIR DETALLE MONSTRUO EN UNA PÁGINA NUEVA ASINCRONIA*/
+
 function monstruos_detail() {
     const xhttp = new XMLHttpRequest();
     xhttp.onload = function() {
@@ -38,8 +40,9 @@ function mostrar_monstruos(data){
     const rowtabla = tabla.childElementCount;
     let contador = 0;
     if (rowtabla>2){
-        monstruos()
+        monstruos();
     }
+
     for (let i = 0; i < data.results.length; i++) {
         contador+=1;
         var tr = document.createElement("tr");
@@ -49,6 +52,7 @@ function mostrar_monstruos(data){
         td.onclick = function () {                      //Con esto le pasamos la ID del bicho a otra función
             detalle_monstruo(data.results[i].name,data.results[i].challenge_rating);     //que se encarga de mostrarlo por pantalla*/
         }
+
         tr.appendChild(td);
         td.id = data.results[i].name;
         var td = document.createElement("td");
@@ -58,6 +62,7 @@ function mostrar_monstruos(data){
         td.innerHTML = data.results[i].challenge_rating;
         tr.appendChild(td);
     }
+
     var tr = document.createElement("tr");
     tabla.appendChild(tr);
     var legend = document.createElement("legend");
@@ -118,28 +123,30 @@ function recoleccion_monstruos_cr() {
 
 
 
-
-
-
-
-
-
-
-
-
+/* Función que pilla el monstruo en cuestión y se lo pasamos a la función mostrar_detalle */
 function detalle_monstruo(monstruo,cr) {
     monstruos_detail();
     fetch('https://api.open5e.com/monsters/?search='+monstruo+'&challenge_rating='+cr)
         .then(monstruo => monstruo.json())
         .then(monster => mostrar_detalle(monster));
 }
+
+/* Creación de tabla con los detalles de monstruo*/
 function mostrar_detalle(monster) {
     let lateral = document.getElementById("detalle-monstruo-print");
     for (let i = 0; i < monster.results.length; i++) {
 
         var img = document.createElement("img");
         img.className="avatar-detalle-monstruo";
-        img.src = 'https://5e.tools/img/MM/'+monster.results[i].name+'.png';
+
+        var consulta = new XMLHttpRequest();
+        consulta.open('GET', 'https://5e.tools/img/MM/'+monster.results[i].name+'.png', false);
+        consulta.send();
+        if (consulta.status === 404){
+            img.src='https://www.trecebits.com/wp-content/uploads/2020/11/Error-404.jpg';
+        }else{
+            img.src = 'https://5e.tools/img/MM/'+monster.results[i].name+'.png';
+        }
         lateral.appendChild(img)
 
 

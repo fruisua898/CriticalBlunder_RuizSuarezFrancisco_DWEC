@@ -27,6 +27,12 @@ tbody > tr > td:first-child::first-letter{
 
 }
 
+main > section > button > img{
+    width: 30vw;
+    height: auto;
+    display: block;
+}
+
 
 thead {
 
@@ -39,9 +45,8 @@ thead {
 
 /*Filtro*/
 @media only screen and (max-width: 1202px) {
-    .section-filter--vademecum {
+     .section-filter--vademecum {
         font-size: 0.7rem;
-
     }
 
 }
@@ -95,13 +100,13 @@ tbody >  legend{
 .tabla-monstruos{
 
     display: block;
-
-    width: 60vw;
     height: 60vh;
     overflow-x: scroll;
     -ms-overflow-style: none; /* IE y Edge*/
     scrollbar-width: none; /* Para Firefox*/
 }
+
+
 
 .tabla-monstruos::-webkit-scrollbar{
     display: none; /* Para chrome */

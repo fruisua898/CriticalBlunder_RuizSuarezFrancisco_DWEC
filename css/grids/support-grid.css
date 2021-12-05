@@ -1,0 +1,77 @@
+@import "grid-padre.css";
+
+
+.grid-main--support{
+    width: 100vw;
+    grid-area: main;
+    display: grid;
+    grid-template-areas:
+    "gridsecsup gridsecsup gridsecsup gridsecsup  gridsecsup  gridsecsup    gridsecsup    gridsecsup  gridsecsup  gridsecsup  gridsecsup  gridsecsup"
+    "gridsecsup gridsecsup gridsecsup gridsecsup  gridsecsup  gridsecsup    gridsecsup    gridsecsup  gridsecsup  gridsecsup  gridsecsup  gridsecsup"
+    "oversupp   oversupp   oversupp   oversupp    oversupp    oversupp      oversupp      oversupp    oversupp    oversupp    oversupp    oversupp"
+    "oversupp   oversupp   oversupp   oversupp    oversupp    oversupp      oversupp      oversupp    oversupp    oversupp    oversupp    oversupp"
+    "oversupp   oversupp   oversupp   oversupp    oversupp    oversupp      oversupp      oversupp    oversupp    oversupp    oversupp    oversupp"
+    "oversupp   oversupp   oversupp   oversupp    oversupp    oversupp      oversupp      oversupp    oversupp    oversupp    oversupp    oversupp"
+    "oversupp   oversupp   oversupp   oversupp    oversupp    oversupp      oversupp      oversupp    oversupp    oversupp    oversupp    oversupp"
+    "oversupp   oversupp   oversupp   oversupp    oversupp    oversupp      oversupp      oversupp    oversupp    oversupp    oversupp    oversupp";
+    grid-gap: .5%;
+}
+
+.grid-section--support{
+    display: grid;
+    justify-content: center;
+    grid-area: gridsecsup;
+    grid-template-areas:
+    "foto-supp  foto-supp   foto-supp   foto-supp   foto-supp   foto-supp       foto-supp       foto-supp   foto-supp   foto-supp   foto-supp  foto-supp"
+    "requests   requests    requests    requests    requests    requests        requests        requests    requests    requests    requests   request";
+}
+.support-head{
+    grid-area: foto-supp;
+}
+
+.requests--support{
+    display: grid;
+    grid-area: requests;
+    grid-template-areas:
+        "newreq newreq newreq newreq .   checkreq   checkreq  checkreq checkreq";
+}
+.new-request{
+    grid-area: newreq;
+    justify-self: center;
+
+
+}
+
+.check-request{
+    grid-area: checkreq;
+    justify-self: center;
+
+}
+
+.overlay--support{
+    display: grid;
+    justify-content: center;
+    grid-area: oversupp;
+    grid-template-areas:
+        "imgaboutus   imgaboutus   imgaboutus   imgaboutus    imgaboutus    imgaboutus      imgaboutus      imgaboutus    imgaboutus    imgaboutus    imgaboutus    imgaboutus"
+        "imgaboutus   imgaboutus   imgaboutus   imgaboutus    imgaboutus    imgaboutus      imgaboutus      imgaboutus    imgaboutus    imgaboutus    imgaboutus    imgaboutus"
+        "titaboutus   titaboutus   titaboutus   titaboutus    titaboutus    titaboutus      titaboutus      titaboutus    titaboutus    titaboutus    titaboutus    titaboutus"
+        "paboutus     paboutus     paboutus     paboutus      paboutus      paboutus        paboutus        paboutus      paboutus      paboutus      paboutus      paboutus"
+        "paboutus     paboutus     paboutus     paboutus      paboutus      paboutus        paboutus        paboutus      paboutus      paboutus      paboutus      paboutus"
+        "paboutus     paboutus     paboutus     paboutus      paboutus      paboutus        paboutus        paboutus      paboutus      paboutus      paboutus      paboutus";
+}
+
+.support-aboutus{
+    grid-area: imgaboutus;
+    justify-self: center;
+}
+
+.titulo-aboutus{
+    grid-area: titaboutus;
+    justify-self: center;
+}
+
+.parrafo-aboutus{
+    grid-area: paboutus;
+    justify-self: center;
+}

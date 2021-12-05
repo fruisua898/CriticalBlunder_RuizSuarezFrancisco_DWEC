@@ -1,5 +1,4 @@
-
-
+@import "grid-padre.css";
 /*
 __________________________________________________
                         VADEMECUM
@@ -167,10 +166,6 @@ __________________________________________________
 /*(1366x768) Pantalla clase*/
 
 @media only screen and (max-width: 1202px) {
-    .grid-aside--index {
-        display: none;
-    }
-
     .grid-padre{
 
         display: grid;
@@ -185,33 +180,17 @@ __________________________________________________
       ".        navgen  navgen      navgen      navgen      navgen      navgen      navgen      navgen      navgen  navgen  ."
       ".        .       main        main        main        main        main        main        main        main    .       ."
       ".        .       main        main        main        main        main        main        main        main    .       ."
-      ".        .       main        main        main        main        main        main        main        .       .       ."
-      ".        .       .           main        main        main        main        main        main        .       .       ."
-      ".        .       .           main        main        main        main        main        main        .       .       ."
-      ".        .       .           main        main        main        main        main        main        .       .       ."
-      ".        .       .           main        main        main        main        main        main        .       .       ."
-      ".        .       .           main        main        main        main        main        main        .       .       ."
+      ".        .       main        main        main        main        main        main        main        main    .       ."
+      ".        .       main        main        main        main        main        main        main        main    .       ."
+      ".        .       main        main        main        main        main        main        main        main    .       ."
+      ".        .       main        main        main        main        main        main        main        main    .       ."
+      ".        .       main        main        main        main        main        main        main        main    .       ."
+      ".        .       main        main        main        main        main        main        main        main    .       ."
       "ftgen    ftgen   ftgen       ftgen       ftgen       ftgen       ftgen       ftgen       ftgen       ftgen   ftgen   ftgen"
       "ftgen    ftgen   ftgen       ftgen       ftgen       ftgen       ftgen       ftgen       ftgen       ftgen   ftgen   ftgen";
 
     }
 
-    .grid-main--vademecum{
-        width: 100vw;
-        grid-area: main;
-        display: grid;
 
-        align-content: center;
-        justify-content: center;
-        align-items: center;
-        grid-template-areas:
-        "main        main        main        main        main        main        main        main    .       ."
-        "main        main        main        main        main        main        main        main    .       ."
-        "main        main        main        main        main        main        .       .       ."
-        "main        main        main        main        main        main        .       .       ."
-        ".        .       .           main        main        main        main        main        main        .       .       ."
-        ".        .       .           main        main        main        main        main        main        .       .       ."
-        ".        .       .           main        main        main        main        main        main        .       .       ."
-        ".        .       .           main        main        main        main        main        main        .       .       ."
-        }
+
 }
