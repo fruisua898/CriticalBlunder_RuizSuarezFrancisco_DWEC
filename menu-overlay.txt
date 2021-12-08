@@ -1,0 +1,18 @@
+<link rel="stylesheet" href="css/overlays-style.css">
+
+<ul class="hamburguer-desplegada" id="header-desplegable">
+    <li onclick="back_menu()"><i class="far fa-window-close"></i></li>
+    <li><a href="vademecum.html">Vademecum</a></li>
+    <li><a href="tabletop.html">Tabletop</a></li>
+    <li><a href="support.html">Contacto</a></li>
+    <li><a href="register.html">Login</a></li>
+    <li>
+        <button onclick="mode('dia')">
+            <img class="dia-img" src="img/dia.png">
+        </button>
+        <button onclick="mode('noche')">
+            <img class="noche-img" src="img/noche.png">
+        </button>
+    </li>
+
+</ul>

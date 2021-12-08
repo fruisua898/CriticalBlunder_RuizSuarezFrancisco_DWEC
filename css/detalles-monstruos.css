@@ -11,8 +11,8 @@ main > section > table > tr > td > em {
     left: 300px;
     top: -30px;
     position: absolute;
+    width: 13vw;
     display: block;
-    max-width: 13vw;
     height: auto;
 }
 
@@ -21,7 +21,7 @@ main > section > table > tr > td > em {
 }
 
 .avatar-detalle-monstruo:hover{
-    transform: scale(3);
+    transform: scale(2);
 }
 
 .stats-base-bonos > td {
@@ -50,6 +50,8 @@ td {
 }
 
 .tabla-detalles{
+    margin-top: 2rem;
+    padding: 1rem;
     border-color: var(--azul-oscuro);
     border-collapse: collapse;
     display: block;
@@ -64,3 +66,32 @@ td {
 table::-webkit-scrollbar{
     display: none; /* Para chrome */
 }
+@media only screen and (max-width: 1420px) {
+    .avatar-detalle-monstruo {
+        left: 350px;
+        top: 10px;
+    }
+}
+@media only screen and (max-width: 970px) {
+    .avatar-detalle-monstruo {
+        left: 300px;
+        top: 30px;
+        width: 17vw;
+    }
+}
+
+@media only screen and (max-width: 864px) {
+    .avatar-detalle-monstruo {
+        left: 300px;
+        top: 70px;
+    }
+}
+
+@media only screen and (max-width: 715px) {
+    .avatar-detalle-monstruo {
+        left: 250px;
+        top: 125px;
+        width: 20vw;
+    }
+}
+

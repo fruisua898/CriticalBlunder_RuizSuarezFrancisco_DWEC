@@ -1,0 +1,21 @@
+    <link rel="stylesheet" href="css/overlays-style.css">
+
+
+    <section class="form-section--support">
+        <form class="form--support">
+               <p class="usuario--support">
+                   <label class="support-u-lab" for="usuario">Nombre</label>
+                   <input class="support-u-inp" type="text" name="usuario" id="usuario">
+               </p>
+
+               <p class="correo--support">
+                   <label class="support-c-lab" for="correo">Correo</label>
+                   <input class="support-c-inp" type="email" name="correo" id="correo">
+               </p>
+               <p class="incidencia--support">
+                   <label class="l-incidencia" for="incidencia">Incidencia</label>
+                   <textarea name="incidencia" class="incidencia"></textarea>
+                   <button class="submit-support" type="submit" name="submit">Enviar</button>
+               </p>
+           </form>
+    </section>

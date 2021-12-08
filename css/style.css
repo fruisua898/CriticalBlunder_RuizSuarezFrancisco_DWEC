@@ -77,6 +77,25 @@ header {
     background-color: var(--gris-claro);
 }
 
+.dia-img, .noche-img{
+  width: 5rem;
+}
+
+.dia{
+    margin-right: 5rem;
+}
+
+.noche{
+    margin-left: 5rem;
+}
+
+.hamburguesa-con-patatas{
+    visibility: hidden;
+    position: fixed;
+    margin-left: 0.5rem;
+
+}
+
 header h1{
     font-size: 2vw;
     margin-bottom: 0;
@@ -100,16 +119,18 @@ ul {
 }
 .grid-nav{
     width: 90vw;
-    font-size: 1rem;
+    font-size: 1.5rem;
     margin-top: 2.5%;
     margin-bottom: 2.5%;
 }
-li>a,a{
-    text-decoration: none;
+nav > li>a{ /* ,a */
+    /*text-decoration: none;*/
     color: var(--gris-claro);
     margin: 0 15% 10px 0;
 }
-
+a{
+    text-decoration: none;
+}
 
 #here{              /*Enlace en el que estamos*/
     color: var(--verde-claro);
@@ -189,7 +210,7 @@ footer, header{
 }
 
 
-form > p > input ,.grid-form--register > div > button {
+form.grid-form--register > p > input ,.grid-form--register > div > button {
     border-color: var(--azul-oscuro);
     background: var(--gris-oscuro-opa);
     color: var(--gris-claro);
@@ -232,23 +253,23 @@ VADEMECUM
 
 .monsters-overlay--vademecum, .items-overlay--vademecum{
 
-    width: 100rem;
+    width: 100vw;
     height: 14rem;
     border-radius: 3.438rem;
-    margin: 0.5rem 10rem 0.5rem  10rem;
+
 }
 
         .monsters-overlay--vademecum{
             background-image: url(../img/monsters.png);
-            width: 75vw;
+            width: 85vw;
         }
             .items-overlay--vademecum{
             background-image: url(../img/items.png);
-            width: 75vw;
+                width: 85vw;
 
         }
 
-.monsters-overlay--vademecum,.items-overlay--vademecum {
+.monsters-overlay--vademecum,.items-overlay--vademecum, .support-aboutus, .support-head {
     background-repeat: no-repeat;
     min-width: 30px;
     max-width: 80vw;
@@ -259,6 +280,8 @@ VADEMECUM
 
 
 }
+
+/*
 .items-explain--vademecum{
     text-shadow: 2px 2px var(--gris-oscuro);
     font-weight: bold;
@@ -271,6 +294,7 @@ VADEMECUM
     padding-left: 20px;
     padding-right: 20px;
 }
+
 .monster-explain--vademecum{
 
     font-weight: bold;
@@ -286,7 +310,7 @@ VADEMECUM
 .monster-explain--vademecum, .items-explain--vademecum{
 width: 50vw;
 
-}
+}*/
 
 /************MEDIAS*************/
 
@@ -298,7 +322,8 @@ width: 50vw;
         width: 5vw;
     }
     footer > svg {
-        align-self: start;
+
+
         width: 40vw;
     }
 }

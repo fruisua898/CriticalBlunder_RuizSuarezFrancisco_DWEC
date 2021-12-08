@@ -75,3 +75,104 @@
     grid-area: paboutus;
     justify-self: center;
 }
+
+/* Overlays */
+
+
+
+/*  Nueva solicitud  */
+
+.form-section--support{
+    display: grid;
+    grid-area: oversupp;
+    grid-template-areas:
+        "newreq   newreq   newreq   newreq    newreq    newreq      newreq      newreq    newreq    newreq    newreq    newreq"
+        "newreq   newreq   newreq   newreq    newreq    newreq      newreq      newreq    newreq    newreq    newreq    newreq"
+        "newreq   newreq   newreq   newreq    newreq    newreq      newreq      newreq    newreq    newreq    newreq    newreq"
+        "newreq   newreq   newreq   newreq    newreq    newreq      newreq      newreq    newreq    newreq    newreq    newreq"
+        "newreq   newreq   newreq   newreq    newreq    newreq      newreq      newreq    newreq    newreq    newreq    newreq"
+        "newreq   newreq   newreq   newreq    newreq    newreq      newreq      newreq    newreq    newreq    newreq    newreq";
+}
+
+.form--support{
+    display: grid;
+    grid-area: newreq;
+    grid-template-areas:
+        "usersupp   usersupp   usersupp   usersupp    probsupp    probsupp      probsupp      probsupp    probsupp    probsupp    probsupp    probsupp"
+        "usersupp   usersupp   usersupp   usersupp    probsupp    probsupp      probsupp      probsupp    probsupp    probsupp    probsupp    probsupp"
+        "usersupp   usersupp   usersupp   usersupp    probsupp    probsupp      probsupp      probsupp    probsupp    probsupp    probsupp    probsupp"
+        "mailsupp   mailsupp   mailsupp   mailsupp    probsupp    probsupp      probsupp      probsupp    probsupp    probsupp    probsupp    probsupp"
+        "mailsupp   mailsupp   mailsupp   mailsupp    probsupp    probsupp      probsupp      probsupp    probsupp    probsupp    probsupp    probsupp"
+        "mailsupp   mailsupp   mailsupp   mailsupp    probsupp    probsupp      probsupp      probsupp    probsupp    probsupp    probsupp    probsupp";
+
+}
+
+.usuario--support{
+    display: grid;
+    grid-area: usersupp;
+    grid-template-areas:
+        "suppuserlab   suppuserlab   suppuserlab   suppuserlab"
+        "suppuserinp   suppuserinp   suppuserinp   suppuserinp"
+        ".             .             .             .";
+
+}
+    .support-u-lab {
+        grid-area: suppuserlab;
+    }
+    .support-u-inp {
+        grid-area: suppuserinp;
+    }
+
+
+
+.correo--support{
+    display: grid;
+    grid-area: mailsupp;
+    grid-template-areas:
+        "suppmaillab   suppmaillab   suppmaillab   suppmaillab"
+        "suppmailinp   suppmailinp   suppmailinp   suppmailinp"
+        ".             .             .             .";
+
+}
+
+
+    .support-c-lab {
+        grid-area: suppmaillab;
+    }
+    .support-c-inp {
+        grid-area: suppmailinp;
+    }
+
+
+.incidencia--support{
+    grid-area: probsupp;
+}
+
+.incidencia--support{
+    display: grid;
+    grid-area: probsupp;
+    grid-template-areas:
+            "labprob    labprob      labprob      labprob    labprob    labprob    labprob    labprob"
+            "txtprob    txtprob      txtprob      txtprob    txtprob    txtprob    txtprob    txtprob"
+            "txtprob    txtprob      txtprob      txtprob    txtprob    txtprob    txtprob    txtprob"
+            "txtprob    txtprob      txtprob      txtprob    txtprob    txtprob    txtprob    txtprob"
+            "txtprob    txtprob      txtprob      txtprob    txtprob    txtprob    txtprob    txtprob"
+            "senprob    senprob      senprob      senprob    senprob    senprob    senprob    senprob";
+}
+
+    .l-incidencia{
+        grid-area: labprob;
+    }
+
+    .incidencia{
+        grid-area: txtprob;
+    }
+
+    .submit-support{
+        grid-area: senprob;
+    }
+
+
+
+
+

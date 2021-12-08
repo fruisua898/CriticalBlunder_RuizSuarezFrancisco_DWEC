@@ -98,6 +98,8 @@ tbody >  legend{
 /*Ajustes para la tabla*/
 
 .tabla-monstruos{
+    margin-left: auto;
+    margin-right: auto;
 
     display: block;
     height: 60vh;
@@ -127,4 +129,67 @@ table > thead > tr > td {
     border-style: solid;
     border-width: 2px;
 }
+
+/* Support */
+.form-section--support {
+    display: block;
+}
+section.form-section--support > form.form--support > p > input, section.form-section--support > form.form--support > p> textarea.incidencia{
+    color: var(--gris-oscuro);
+    border-radius: 1rem;
+    height: 3rem;
+    background-color: var(--gris-claro);
+    padding: 0.5rem;
+}
+
+
+
+
+section.form-section--support > form.form--support > p> textarea.incidencia{
+    width: 40vw;
+    height: 35vh;
+
+}
+
+section.form-section--support > form.form--support > p{
+    padding: 1rem;
+}
+
+form.form--support > p > button{
+    margin-top: 1vw;
+    color: var(--gris-oscuro);
+    border-radius: 1rem;
+    background-color: var(--gris-claro);
+    border-style: solid;
+    padding: 1vw;
+}
+
+.hamburguer-desplegada{
+    position: absolute;
+    border-radius: 1.5rem;
+    border-style: solid;
+    border-color: var(--verde-claro);
+    font-size: 2rem;
+    padding: 2rem;
+    background-color: var(--gris-claro);
+    color: var(--gris-oscuro);
+    align-content: center;
+}
+
+.hamburguer-desplegada  >  li > a{
+
+
+    color: var(--gris-oscuro);
+
+}
+.hamburguer-desplegada  >  li{
+    margin-top: 2rem;
+
+}
+
+.far{
+    font-size: 10rem;
+}
+
+
 

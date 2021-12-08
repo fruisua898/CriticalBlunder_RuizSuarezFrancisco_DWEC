@@ -31,7 +31,7 @@
     align-content: center;
     justify-content: center;
     align-items: center;
-    grid-template-areas: "logo-header    titulo-header";
+    grid-template-areas: "dia . .   .   .    logo-header    titulo-header . .   .   .         noche";
     grid-gap: .5%;
 }
 
@@ -43,6 +43,12 @@
         grid-area: titulo-header;
     }
 
+    .dia{
+        grid-area: dia;
+    }
+    .noche{
+        grid-area: noche;
+    }
 /* NAV */
 
 .grid-nav{
@@ -131,12 +137,20 @@
 
 /*Media genérica*/
 @media only screen and (max-width: 800px) {
+        .grid-aside--index {
+            display: none;
+        }
+        header > .hamburguesa-con-patatas{
+            visibility: visible;
 
+        }
+        .dia, .noche{
+            visibility: hidden;
+        }
 
     .grid-footer {
         grid-area: ftgen;
         display: grid;
-
         align-items: center;
         align-content: center;
         justify-content: center;

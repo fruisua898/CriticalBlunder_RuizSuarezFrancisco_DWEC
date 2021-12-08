@@ -21,6 +21,12 @@ function monstruos() {
     xhttp.send();
 }
 
+
+
+
+
+
+
 /* ABRIR DETALLE MONSTRUO EN UNA PÁGINA NUEVA ASINCRONIA*/
 
 function monstruos_detail() {
@@ -31,7 +37,6 @@ function monstruos_detail() {
     xhttp.open("GET", "detalle-monstruo.txt", true);
     xhttp.send();
 }
-
 
 /* Función que imprime los monstruos en pantalla */
 
@@ -131,6 +136,8 @@ function detalle_monstruo(monstruo,cr) {
         .then(monster => mostrar_detalle(monster));
 }
 
+
+
 /* Creación de tabla con los detalles de monstruo*/
 function mostrar_detalle(monster) {
     let lateral = document.getElementById("detalle-monstruo-print");
@@ -174,7 +181,7 @@ function mostrar_detalle(monster) {
             tr.appendChild(td);
         }
         td.colSpan=2;
-        td.className="rayote";
+        td.className = "rayote";
         tr.appendChild(td);
 
 
@@ -230,7 +237,7 @@ function mostrar_detalle(monster) {
         if (monster.results[i].speed.swim){movimiento_bicho+=(", Swin "+monster.results[i].speed.swim+ " ft ");}
         td.innerHTML = movimiento_bicho;
         td.colSpan=2;
-        td.className="rayote";
+        td.className = "rayote";
         tr.appendChild(td);
 
         /*ATRIBUTOS
@@ -287,38 +294,38 @@ function mostrar_detalle(monster) {
         var td = document.createElement("td");
         let fuerza = Math.trunc((monster.results[i].strength-10)/2);
         td.innerHTML =monster.results[i].strength+" (+"+fuerza+") ";
-        td.className="rayote";
+        td.className = "rayote";
         tr.appendChild(td);
 
         var td = document.createElement("td");
         let destreza = Math.trunc((monster.results[i].dexterity-10)/2);
-        td.innerHTML =monster.results[i].dexterity+" (+"+destreza+") ";
-        td.className="rayote";
+        td.innerHTML = monster.results[i].dexterity+" (+"+destreza+") ";
+        td.className = "rayote";
         tr.appendChild(td);
 
 
         var td = document.createElement("td");
         let constitucion = Math.trunc((monster.results[i].constitution-10)/2);
         td.innerHTML =monster.results[i].constitution+" (+"+constitucion+") ";
-        td.className="rayote";
+        td.className = "rayote";
         tr.appendChild(td);
 
         var td = document.createElement("td");
         let inteligencia = Math.trunc((monster.results[i].intelligence-10)/2);
         td.innerHTML =monster.results[i].intelligence+" (+"+inteligencia+") ";
-        td.className="rayote";
+        td.className = "rayote";
         tr.appendChild(td);
 
         var td = document.createElement("td");
         let sabiduria = Math.trunc((monster.results[i].wisdom-10)/2);
         td.innerHTML =monster.results[i].wisdom+" (+"+sabiduria+") ";
-        td.className="rayote";
+        td.className = "rayote";
         tr.appendChild(td);
 
         var td = document.createElement("td");
         let carisma = Math.trunc((monster.results[i].charisma-10)/2);
         td.innerHTML =monster.results[i].charisma+" (+"+carisma+") ";
-        td.className="rayote";
+        td.className = "rayote";
         tr.appendChild(td);
 
         var tr = document.createElement("tr");
@@ -332,19 +339,19 @@ function mostrar_detalle(monster) {
         let wis_throw = monster.results[i].wisdom_save;
         let cha_throw = monster.results[i].charisma_save;
 
-        /* Comprobamos que exista algún parametro para hacer las comprobaciones y meter lo correspondiente*/
+        /* Comprobamos que exista algún parametro para hacer las comprobaciones y meter lo correspondiente */
         if (str_throw || dex_throw || con_throw || int_throw || wis_throw || cha_throw){
 
             var td = document.createElement("td");
             td.innerHTML ="<a>Saving Throws </a>";
-            td.className="rayote";
+            td.className = "rayote";
             tr.appendChild(td);
             tr.appendChild(td);
 
         if (str_throw){
             var td = document.createElement("td");
             td.innerHTML ="Str "+(str_throw);
-            td.className="rayote";
+            td.className = "rayote";
             //td.colSpan=2;
             tr.appendChild(td);
         }
@@ -352,21 +359,21 @@ function mostrar_detalle(monster) {
         if (dex_throw){
             var td = document.createElement("td");
             td.innerHTML ="Dex "+(dex_throw);
-            td.className="rayote";
+            td.className = "rayote";
             //td.colSpan=2;
             tr.appendChild(td);
         }
         if (con_throw){
             var td = document.createElement("td");
             td.innerHTML ="Con "+(con_throw);
-            td.className="rayote";
+            td.className = "rayote";
             //td.colSpan=2;
             tr.appendChild(td);
         }
         if (int_throw){
             var td = document.createElement("td");
             td.innerHTML ="Int "+(int_throw);
-            td.className="rayote";
+            td.className = "rayote";
             //td.colSpan=2;
             tr.appendChild(td);
         }
@@ -374,7 +381,7 @@ function mostrar_detalle(monster) {
         if (wis_throw){
             var td = document.createElement("td");
             td.innerHTML ="Wis "+(wis_throw);
-            td.className="rayote";
+            td.className = "rayote";
             //td.colSpan=2;
             tr.appendChild(td);
         }
@@ -382,7 +389,7 @@ function mostrar_detalle(monster) {
         if (cha_throw){
             var td = document.createElement("td");
             td.innerHTML ="Cha "+(cha_throw);
-            td.className="rayote";
+            td.className = "rayote";
             //td.colSpan=2;
             tr.appendChild(td);
         }
@@ -395,11 +402,23 @@ function mostrar_detalle(monster) {
 
 
 
+/* Support  */
 
+function nueva_solicitud() {
+    const xhttp = new XMLHttpRequest();
+    xhttp.onload = function() {
+        document.getElementById("overlay--support").innerHTML = this.responseText;
+    }
+    xhttp.open("GET", "nueva_solicitud.txt", true);
+    xhttp.send();
+}
 
-
-
-
-
-
+function check_solicitud() {
+    const xhttp = new XMLHttpRequest();
+    xhttp.onload = function() {
+        document.getElementById("overlay--support").innerHTML = this.responseText;
+    }
+    xhttp.open("GET", "check_request.txt", true);
+    xhttp.send();
+}
 

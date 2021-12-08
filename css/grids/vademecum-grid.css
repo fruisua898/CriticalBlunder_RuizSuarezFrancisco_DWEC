@@ -8,40 +8,38 @@ __________________________________________________
 
 .grid-main--vademecum{
     width: 100vw;
-    grid-area: main;
     display: grid;
-
+    grid-area: main;
     align-content: center;
     justify-content: center;
     align-items: center;
     grid-template-areas:
-    ". secover  secover  secover  secover  secover    secover    secover   secover  secover  secover  secover"
-    ". secover secover secover secover secover   secover   secover  secover secover secover secover"
-    ". secover secover secover secover secover   secover   secover  secover secover secover secover"
-    ". secover secover secover secover secover   secover   secover  secover secover secover secover"
-    ". secover secover secover secover secover   secover   secover  secover secover secover secover"
-    ". secover secover secover secover secover   secover   secover  secover secover secover secover"
-    ". secover secover secover secover secover   secover   secover  secover secover secover secover"
-    ". secover secover secover secover secover   secover   secover  secover secover secover secover";
+    "secover secover secover secover secover secover   secover   secover  secover secover secover secover"
+    "secover secover secover secover secover secover   secover   secover  secover secover secover secover"
+    "secover secover secover secover secover secover   secover   secover  secover secover secover secover"
+    "secover secover secover secover secover secover   secover   secover  secover secover secover secover"
+    "secover secover secover secover secover secover   secover   secover  secover secover secover secover"
+    "secover secover secover secover secover secover   secover   secover  secover secover secover secover"
+    "secover secover secover secover secover secover   secover   secover  secover secover secover secover"
+    "secover secover secover secover secover secover   secover   secover  secover secover secover secover";
     grid-gap: .5%;
 }
 
 .section-overlay--vademecum{
     grid-area: secover;
     display: grid;
-    grid-auto-flow: row;
     align-content: center;
     justify-content: center;
     align-items: center;
     grid-template-areas:
 
-        "  .   .  itemsvad     itemsvad    itemsvad    itemsvad    itemsvad    .        .       .   menusvg"
-        "  .   .  itemsvad     itemsvad    itemsvad    itemsvad    itemsvad    .        .       .   menusvg"
-        "  .   .  pitems       pitems      pitems      pitems      pitems      .        .       .   menusvg"
-        "  .   .  monstervad   monstervad  monstervad  monstervad  monstervad  .        .       .   menusvg"
-        "  .   .  monstervad   monstervad  monstervad  monstervad  monstervad  .        .       .   menusvg"
-        "  .   .  pmonsters    pmonsters   pmonsters   pmonsters   pmonsters   .        .       .   menusvg"
-        "  .   .  .            .           .           .           .           .        .       .   .";
+        ".   itemsvad   itemsvad    itemsvad    itemsvad    itemsvad    itemsvad    itemsvad    itemsvad    itemsvad    itemsvad    itemsvad"
+        ".   itemsvad   itemsvad    itemsvad    itemsvad    itemsvad    itemsvad    itemsvad    itemsvad    itemsvad    itemsvad    itemsvad"
+        ".   itemsvad   itemsvad    itemsvad    itemsvad    itemsvad    itemsvad    itemsvad    itemsvad    itemsvad    itemsvad    itemsvad"
+        ".   .          .           .           .           .           .           .           .           .           .           ."
+        ".   monstervad monstervad  monstervad  monstervad  monstervad  monstervad  monstervad  monstervad  monstervad  monstervad  monstervad"
+        ".   monstervad monstervad  monstervad  monstervad  monstervad  monstervad  monstervad  monstervad  monstervad  monstervad  monstervad"
+        ".   monstervad monstervad  monstervad  monstervad  monstervad  monstervad  monstervad  monstervad  monstervad  monstervad  monstervad";
 }
 
 .busca-nombre{
@@ -118,7 +116,7 @@ __________________________________________________
 }
 
 /* Tabla y ficha */
-/*
+
 .section-overlay-monsters--vademecum{
     grid-area: secover;
     display: inline-grid;
@@ -130,10 +128,10 @@ __________________________________________________
         ".  montab   montab  montab    montab    montab      montab    montab    montab   montab   montab "
         ".  montab   montab  montab    montab    montab      montab    montab    montab   montab   montab "
         ".  montab   montab  montab    montab    montab      montab    montab    montab   montab   montab "
-        ".  detmontab   detmontab  detmontab    detmontab    detmontab      detmontab    detmontab    detmontab   detmontab   detmontab "
-        ".  detmontab   detmontab  detmontab    detmontab    detmontab      detmontab    detmontab    detmontab   detmontab   detmontab "
-        ".  detmontab   detmontab  detmontab    detmontab    detmontab      detmontab    detmontab    detmontab   detmontab   detmontab "
-        ".  detmontab   detmontab  detmontab    detmontab    detmontab      detmontab    detmontab    detmontab   detmontab   detmontab ";
+        ".  montab   montab  montab    montab    montab      montab    montab    montab   montab   montab "
+        ".  montab   montab  montab    montab    montab      montab    montab    montab   montab   montab "
+        ".  montab   montab  montab    montab    montab      montab    montab    montab   montab   montab "
+        ".  montab   montab  montab    montab    montab      montab    montab    montab   montab   montab ";
 }
 
 .section-filter--vademecum{
@@ -141,20 +139,40 @@ __________________________________________________
 
     grid-auto-flow: row;
     align-content: center;
-
+    justify-content: center;
     align-items: center;
     grid-template-areas:
 
-        "s-nombre    f-campaign       s-submit           go-monster    go-equip";
+        "s-nombre    f-campaign       s-submit";
 }
+    .busca-nombre {
+        grid-area: s-nombre;
+    }
+
+    .filtro-campaign {
+        grid-area: f-campaign;
+    }
+
+    .submit-busca {
+        grid-area: s-submit;
+    }
 
 .tabla-monstruos{
+
     grid-area: montab;
+}
+thead{
+    align-content: center;
+    justify-content: center;
+    align-items: center;
 
 }
+
+
+
 .detalle-monstruo-print {
     grid-area: detmontab;
-}*/
+}
 
 
 
