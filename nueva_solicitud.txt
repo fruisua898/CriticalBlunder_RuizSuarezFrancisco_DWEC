@@ -1,8 +1,7 @@
     <link rel="stylesheet" href="css/overlays-style.css">
-
-
+    <script src="js/validaciones.js"></script>
     <section class="form-section--support">
-        <form class="form--support">
+        <form class="form--support" onsubmit="return validacion()">
                <p class="usuario--support">
                    <label class="support-u-lab" for="usuario">Nombre</label>
                    <input class="support-u-inp" type="text" name="usuario" id="usuario">
@@ -15,7 +14,7 @@
                <p class="incidencia--support">
                    <label class="l-incidencia" for="incidencia">Incidencia</label>
                    <textarea name="incidencia" class="incidencia"></textarea>
-                   <button class="submit-support" type="submit" name="submit">Enviar</button>
+                       <button class="submit-support" type="submit" name="submit">Enviar</button>
                </p>
            </form>
     </section>

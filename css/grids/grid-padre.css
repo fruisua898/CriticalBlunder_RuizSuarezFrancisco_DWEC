@@ -201,3 +201,71 @@
         grid-area: telegram;
     }
 }
+
+/* Media movil */
+@media only screen and (min-width : 321px)
+and (max-device-width : 700px){
+    .grid-aside--index {
+        display: none;
+    }
+    header > .hamburguesa-con-patatas{
+        visibility: visible;
+
+    }
+    .dia, .noche{
+        visibility: hidden;
+    }
+
+    .grid-footer {
+        grid-area: ftgen;
+        display: grid;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+        grid-template-areas:
+
+        "doc-legales       doc-legales          doc-legales         doc-legales     doc-legales         doc-legales         doc-legales         doc-legales     doc-legales         doc-legales       doc-legales       doc-legales"
+        "logo-footer       redes-sociales       redes-sociales      redes-sociales  redes-sociales      redes-sociales      redes-sociales      redes-sociales  redes-sociales      redes-sociales    redes-sociales    redes-sociales";
+    }
+
+    .logo-titulo-footer {
+        grid-area: logo-footer;
+    }
+
+    .doc-legales {
+        grid-area: doc-legales;
+        display: grid;
+        grid-template: ". aviso-legal cookies politicas .";
+
+    }
+
+    .grid-nav{
+        display: none;
+    }
+
+    .redes-sociales{
+        grid-area: redes-sociales;
+    }
+
+
+    .redes-sociales{
+        grid-area: redes-sociales;
+        grid-template-areas: "instagram facebook twitter telegram";
+        display: grid;
+
+    }
+
+    .instagram{
+        grid-area: instagram;
+
+    }
+    .facebook{
+        grid-area: facebook;
+    }
+    .twitter{
+        grid-area: twitter;
+    }
+    .telegram{
+        grid-area: telegram;
+    }
+}

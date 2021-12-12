@@ -8,10 +8,10 @@
     <li><a href="register.html">Login</a></li>
     <li>
         <button onclick="mode('dia')">
-            <img class="dia-img" src="img/dia.png">
+            <img class="dia-img-mobile" src="img/dia.png">
         </button>
         <button onclick="mode('noche')">
-            <img class="noche-img" src="img/noche.png">
+            <img class="noche-img-mobile" src="img/noche.png">
         </button>
     </li>
 

@@ -48,8 +48,9 @@ h1 {
 }
 
 h2 {
+
     font-family: var(--titulos), Serif;
-    font-weight: lighter;
+    font-weight: bold;
     margin-bottom: 8%;
     font-size: 1.2rem;
 
@@ -78,7 +79,10 @@ header {
 }
 
 .dia-img, .noche-img{
-  width: 5rem;
+    width: 5rem;
+}
+.noche-img-mobile, .dia-img-mobile{
+    width: 5rem;
 }
 
 .dia{
@@ -175,7 +179,7 @@ div > h2{
 }
 
 
-
+/* REGISTRO */
 .grid-main--register{
 
     background-image: url(../img/svg/cavern-blue.svg);
@@ -190,20 +194,18 @@ footer, header{
 }
 
 .grid-form--register {
-
+    width: 100%;
+    justify-self: center;
+    margin: 2rem 0 2rem 0;
+    resize: both;
+    min-width: 120px;
+    max-width: 90vw;
     border-width: 0.1rem;
     border-style: solid;
     background-color: var(--gris-oscuro-opa);
     border-radius: 1rem;
 }
 
-.grid-form--register{
-    width: 100%;
-    margin: 2rem 0 2rem 0;
-    resize: both;
-    min-width: 120px;
-    max-width: 90vw;
-}
 .grid-main--vademecum{
 
     resize:horizontal;
@@ -256,6 +258,9 @@ VADEMECUM
     width: 100vw;
     height: 14rem;
     border-radius: 3.438rem;
+    font-size: 3rem;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: var(--gris-oscuro);
 
 }
 
@@ -281,36 +286,7 @@ VADEMECUM
 
 }
 
-/*
-.items-explain--vademecum{
-    text-shadow: 2px 2px var(--gris-oscuro);
-    font-weight: bold;
-    color: var(--gris-claro);
-    font-size: 2rem;
-    position: absolute;
-    background-color: var(--gris-oscuro-opa);
-    bottom: 35%;
-    right: 25%;
-    padding-left: 20px;
-    padding-right: 20px;
-}
 
-.monster-explain--vademecum{
-
-    font-weight: bold;
-    color: white;
-    font-size: 2rem;
-    position: absolute;
-    bottom: 20px;
-    right: 20px;
-    padding-left: 20px;
-    padding-right: 20px;
-}
-
-.monster-explain--vademecum, .items-explain--vademecum{
-width: 50vw;
-
-}*/
 
 /************MEDIAS*************/
 
@@ -322,8 +298,6 @@ width: 50vw;
         width: 5vw;
     }
     footer > svg {
-
-
         width: 40vw;
     }
 }
@@ -374,6 +348,10 @@ h2.titulo-aboutus{
 }
 
 .new-request, .check-request{
+    width: 35vw;
+    border-radius: 1.3rem;
+    padding: 1rem;
+    border-style: solid;
     margin-top: 2rem;
     font-weight: bold;
     font-size: 1.3rem;
@@ -390,10 +368,118 @@ h2.titulo-aboutus{
 @media only screen and (max-width: 669px) {
 
     .new-request, .check-request{
-        margin-top: 1rem;
+        width: 35vw;
+        border-radius: 1.3rem;
+        padding: 1rem;
+        border-style: solid;
         font-weight: bold;
-        font-size: 0.7rem;
+        font-size: 1rem;
+
     }
 }
+
+
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 480px) {
+    footer > svg {
+        width: 40vw;
+    }
+
+    footer {
+        font-size: 0.7rem;
+    }
+
+    .grid-menu--top {
+        display: none;
+    }
+
+    body {
+        font-size: 1.5rem;
+    }
+
+    .new-request, .check-request{
+        width: 35vw;
+        border-radius: 1.3rem;
+        padding: 1rem;
+        border-style: solid;
+        margin-top: 1rem;
+        font-weight: bold;
+        font-size: 2.3rem;
+    }
+    .hamburguer-desplegada  >  li > a {
+        font-size: 3rem;
+    }
+    .noche-img-mobile, .dia-img-mobile{
+        width: 10rem;
+    }
+
+
+}
+
+    /* Smartphones (landscape) ----------- */
+    @media only screen
+    and (min-width: 321px)
+    and (max-device-width: 600px) {
+        #footer-fix {
+            font-size: 2rem;
+        }
+
+        footer > svg {
+            width: 35vw;
+            margin-right: 10vw;
+            margin-top: 5vw;
+        }
+
+        footer {
+            font-size: 0.8rem;
+        }
+
+        .grid-menu--top {
+            display: none;
+        }
+
+        .hamburguesa-con-patatas {
+            visibility: visible;
+            position: fixed;
+            margin-left: 0.5rem;
+
+        }
+
+        footer > ul > li > a {
+            margin-right: 1vw;
+            margin-left: 9vw;
+        }
+
+        footer > ul {
+            margin-top: 5vw;
+        }
+
+        .dia-img, .noche-img {
+            visibility: hidden;
+        }
+
+        .amborgesa {
+            width: 10vw;
+        }
+
+        /* VADEMECUM */
+        .items-overlay--vademecum, .monsters-overlay--vademecum {
+            width: 85vw;
+            height: 35vh;
+            font-size: 5rem;
+
+        }
+
+        .section-overlay-monsters--vademecum > .section-filter--vademecum {
+            font-size: 1.8rem;
+        }
+    }
+
+
+
+
 
 

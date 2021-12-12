@@ -1,4 +1,4 @@
-@import "grid-padre.css";
+
 /*
 __________________________________________________
                         VADEMECUM
@@ -37,6 +37,7 @@ __________________________________________________
         ".   itemsvad   itemsvad    itemsvad    itemsvad    itemsvad    itemsvad    itemsvad    itemsvad    itemsvad    itemsvad    itemsvad"
         ".   itemsvad   itemsvad    itemsvad    itemsvad    itemsvad    itemsvad    itemsvad    itemsvad    itemsvad    itemsvad    itemsvad"
         ".   .          .           .           .           .           .           .           .           .           .           ."
+        ".   .          .           .           .           .           .           .           .           .           .           ."
         ".   monstervad monstervad  monstervad  monstervad  monstervad  monstervad  monstervad  monstervad  monstervad  monstervad  monstervad"
         ".   monstervad monstervad  monstervad  monstervad  monstervad  monstervad  monstervad  monstervad  monstervad  monstervad  monstervad"
         ".   monstervad monstervad  monstervad  monstervad  monstervad  monstervad  monstervad  monstervad  monstervad  monstervad  monstervad";
@@ -57,6 +58,7 @@ __________________________________________________
 .boton-bestiario--vademecum{
     grid-area: go-monster;
 }
+
 .boton-equipamiento--vademecum{
     grid-area: go-equip;
 }
@@ -64,24 +66,11 @@ __________________________________________________
 .items-overlay--vademecum{
     grid-area: itemsvad;
 }
-.items-explain--vademecum{
-    grid-area: pitems;
-    display: inline-grid;
-    justify-content: center;
-}
 
 .monsters-overlay--vademecum{
     grid-area: monstervad;
 
 }
-
-.monster-explain--vademecum{
-    grid-area: pmonsters;
-    display: grid;
-    justify-content: center;
-    font-size: 10px;
-}
-
 
 .svgdesplegable{
     display: grid;
@@ -96,14 +85,14 @@ __________________________________________________
     justify-content: center;
     align-items: center;
     grid-template-areas:
-        ".  mundvad   mundvad  mundvad    mundvad    .    magicvad    magicvad    magicvad   magicvad   .";
-        ".  mundvad   mundvad  mundvad    mundvad    .    magicvad    magicvad    magicvad   magicvad   ."
-        ".  mundvad   mundvad  mundvad    mundvad    .    magicvad    magicvad    magicvad   magicvad   ."
-        ".  mundvad   mundvad  mundvad    mundvad    .    magicvad    magicvad    magicvad   magicvad   ."
-        ".  mundvad   mundvad  mundvad    mundvad    .    magicvad    magicvad    magicvad   magicvad   ."
-        ".  mundvad   mundvad  mundvad    mundvad    .    magicvad    magicvad    magicvad   magicvad   ."
-        ".  mundvad   mundvad  mundvad    mundvad    .    magicvad    magicvad    magicvad   magicvad   ."
-        ".  mundvad   mundvad  mundvad    mundvad    .    magicvad    magicvad    magicvad   magicvad   .";
+        ".  mundvad   mundvad  mundvad    mundvad    .    magicvad    magicvad    magicvad   magicvad   magicvad    .";
+        ".  mundvad   mundvad  mundvad    mundvad    .    magicvad    magicvad    magicvad   magicvad   magicvad    .";
+        ".  mundvad   mundvad  mundvad    mundvad    .    magicvad    magicvad    magicvad   magicvad   magicvad    .";
+        ".  mundvad   mundvad  mundvad    mundvad    .    magicvad    magicvad    magicvad   magicvad   magicvad    .";
+        ".  mundvad   mundvad  mundvad    mundvad    .    magicvad    magicvad    magicvad   magicvad   magicvad    .";
+        ".  mundvad   mundvad  mundvad    mundvad    .    magicvad    magicvad    magicvad   magicvad   magicvad    .";
+        ".  mundvad   mundvad  mundvad    mundvad    .    magicvad    magicvad    magicvad   magicvad   magicvad    .";
+        ".  mundvad   mundvad  mundvad    mundvad    .    magicvad    magicvad    magicvad   magicvad   magicvad    .";
 }
 
 
@@ -124,7 +113,7 @@ __________________________________________________
     justify-content: center;
     align-items: center;
     grid-template-areas:
-        ".  filter   filter  filter    filter    filter filter       filter       filter      filter   ."
+        ".  filter   filter  filter    filter    filter      filter    filter    filter   filter   ."
         ".  montab   montab  montab    montab    montab      montab    montab    montab   montab   montab "
         ".  montab   montab  montab    montab    montab      montab    montab    montab   montab   montab "
         ".  montab   montab  montab    montab    montab      montab    montab    montab   montab   montab "
@@ -183,32 +172,3 @@ thead{
 
 /*(1366x768) Pantalla clase*/
 
-@media only screen and (max-width: 1202px) {
-    .grid-padre{
-
-        display: grid;
-        width: 100vw;
-        height: 100vh;
-        grid-template-columns: repeat(12, minmax(0,1fr));
-        grid-template-rows: repeat(12, auto);
-        grid-column-gap: .5%;
-        grid-row-gap: .5%;
-        grid-template-areas:
-      "hdgen    hdgen   hdgen       hdgen       hdgen       hdgen       hdgen       hdgen       hdgen       hdgen   hdgen   hdgen"
-      ".        navgen  navgen      navgen      navgen      navgen      navgen      navgen      navgen      navgen  navgen  ."
-      ".        .       main        main        main        main        main        main        main        main    .       ."
-      ".        .       main        main        main        main        main        main        main        main    .       ."
-      ".        .       main        main        main        main        main        main        main        main    .       ."
-      ".        .       main        main        main        main        main        main        main        main    .       ."
-      ".        .       main        main        main        main        main        main        main        main    .       ."
-      ".        .       main        main        main        main        main        main        main        main    .       ."
-      ".        .       main        main        main        main        main        main        main        main    .       ."
-      ".        .       main        main        main        main        main        main        main        main    .       ."
-      "ftgen    ftgen   ftgen       ftgen       ftgen       ftgen       ftgen       ftgen       ftgen       ftgen   ftgen   ftgen"
-      "ftgen    ftgen   ftgen       ftgen       ftgen       ftgen       ftgen       ftgen       ftgen       ftgen   ftgen   ftgen";
-
-    }
-
-
-
-}

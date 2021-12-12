@@ -1,2 +1,8 @@
-<section>
-</section>
+    <section id="overlay--support" class="overlay--support">
+        <img class="support-aboutus">
+        <h2 class="titulo-aboutus">¿Quienes somos?</h2>
+        <p class="parrafo-aboutus">Somos Critical Blunder, el nombre es un juego de palabras al español sería Pifia Crítica.
+            Somos una organización sin ánimo de lucro y nuestra intención es dar una herramienta
+            para ayudar a los masters y jugadores a tener una experiencia más satisfactoria
+            sin tener que estar gastando papel ni haciendo cálculos básicos.</p>
+    </section>
